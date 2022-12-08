@@ -1,6 +1,6 @@
 
 <div align='center'>
-# Open Source Wrapped with ❤️ by Schrodinger's Hat  
+  <h1>Open Source Wrapped with ❤️ by Schrodinger's Hat</h1>
   
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
