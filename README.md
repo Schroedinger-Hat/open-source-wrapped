@@ -1,6 +1,6 @@
-# Open Source Wrapped with ❤️ by Schrodinger's Hat
+
 <div align='center'>
-  
+# Open Source Wrapped with ❤️ by Schrodinger's Hat  
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -14,7 +14,7 @@
   <h1>Open Source Wrapped</h1>
   
   <a href="https://github.com/Schrodinger-Hat/open-source-wrapped">
-    <img src="public/sh.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/Schrodinger-Hat/osday-2023/raw/main/public/sh.png" alt="Logo" width="80" height="80">
   </a>
 
   <p align="center">
