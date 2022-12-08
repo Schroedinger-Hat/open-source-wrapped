@@ -91,12 +91,12 @@ Schrodinger's Hat Team - [@schrodinger_hat](mailto:osday@schrodinger-hat.it)
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Schrodinger-Hat/osday-2023.svg?style=for-the-badge
-[contributors-url]: https://github.com/Schrodinger-Hat/osday-2023/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Schrodinger-Hat/osday-2023.svg?style=for-the-badge
-[forks-url]: https://github.com/Schrodinger-Hat/osday-2023/network/members
+[contributors-shield]: https://img.shields.io/github/contributors/Schrodinger-Hat/open-source-wrapped.svg?style=for-the-badge
+[contributors-url]: https://github.com/Schrodinger-Hat/open-source-wrapped/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Schrodinger-Hat/open-source-wrapped.svg?style=for-the-badge
+[forks-url]: https://github.com/Schrodinger-Hat/open-source-wrapped/network/members
 [stars-shield]: https://img.shields.io/github/stars/Schrodinger-Hat/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/Schrodinger-Hat/osday-2023/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Schrodinger-Hat/osday-2023.svg?style=for-the-badge
-[issues-url]: https://github.com/Schrodinger-Hat/osday-2023/issues
+[stars-url]: https://github.com/Schrodinger-Hat/open-source-wrapped/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Schrodinger-Hat/open-source-wrapped.svg?style=for-the-badge
+[issues-url]: https://github.com/Schrodinger-Hat/open-source-wrapped/issues
 
