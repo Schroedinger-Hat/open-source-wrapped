@@ -1,13 +1,10 @@
 import './App.css';
-import WrappedCard from './components/Card';
+import WrappedCard from './components/WrappedCard';
 
 function App() {
   return (
     <div className="App">
-      <div id="wrappedImage">
-        Wrapped Image for testing graphics
-      </div>
-      <WrappedCard />
+      <WrappedCard type="Hello SH!" score="10" img="wrapped3.png" />
     </div>
   );
 }
