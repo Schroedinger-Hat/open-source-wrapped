@@ -71,7 +71,7 @@ yarn
 yarn dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result. You can change the port with `--port`flag.
 
 <!-- CONTRIBUTING -->
 
