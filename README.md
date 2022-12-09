@@ -99,4 +99,3 @@ Schrodinger's Hat Team - [@schrodinger_hat](mailto:osday@schrodinger-hat.it)
 [stars-url]: https://github.com/Schrodinger-Hat/open-source-wrapped/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Schrodinger-Hat/open-source-wrapped.svg?style=for-the-badge
 [issues-url]: https://github.com/Schrodinger-Hat/open-source-wrapped/issues
-
