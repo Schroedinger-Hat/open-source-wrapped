@@ -22,6 +22,7 @@ export const serverSchema = z.object({
   GITHUB_CLIENT_ID: z.string(),
   GITHUB_CLIENT_SECRET: z.string(),
   GITHUB_APP_ID: z.string().transform((str) => parseInt(str, 10)),
+  GITHUB_TOKEN: z.string(),
 });
 
 /**

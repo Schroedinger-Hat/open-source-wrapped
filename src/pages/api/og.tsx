@@ -14,7 +14,7 @@ export default async function (req: NextRequest) {
   const avatar = searchParams.get("avatar") || "";
   const repos = trunArr(searchParams.getAll("repos"), MAX_LEN);
   const contribs = trunArr(searchParams.getAll("contribs"), MAX_LEN);
-  const stars = Number(searchParams.get("stars") || "10");
+  const commits = Number(searchParams.get("commits") || "10");
 
   return new ImageResponse(
     (
@@ -59,8 +59,8 @@ export default async function (req: NextRequest) {
           </div>
           <div tw="flex text-5xl w-full justify-between mt-10">
             <div tw="flex flex-col flex-grow-0 w-1/2">
-              <span tw="text-red-600"> Stars ⭐️</span>
-              <span tw="text-7xl mt-10"> {stars} </span>
+              <span tw="text-red-600"> Commits </span>
+              <span tw="text-7xl mt-10"> {commits} </span>
             </div>
             <div tw="flex flex-grow-0 w-1/2 flex-col">
               <span tw="text-red-600"> Preferred Language </span>
