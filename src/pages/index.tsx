@@ -1,5 +1,4 @@
-import './App.css';
-import WrappedCard from './components/WrappedCard';
+import WrappedCard from '../components/WrappedCard';
 
 function App() {
   return (

@@ -7,22 +7,23 @@ export const useWrappedImage = ({
   img
 }: TWrappedCard): undefined | string => {
   const [imgSrc, setImgSrc] = useState<undefined | string>(undefined);
-  const canvas = document.createElement('canvas');
-
-  const cw = (canvas.width = 1080);
-  const ch = (canvas.height = 1080);
-
-  const ctx = canvas.getContext('2d');
-
-  if (!ctx) return;
-
-  const wrapped = new Image();
-  const wrappedText = type || 'Repository Name';
-  const wrappedScore = score || '';
-
-  wrapped.src = img || 'wrapped1.png';
 
   useEffect(() => {
+    const canvas = document.createElement('canvas');
+
+    const cw = (canvas.width = 1080);
+    const ch = (canvas.height = 1080);
+
+    const ctx = canvas.getContext('2d');
+
+    if (!ctx) return;
+
+    const wrapped = new Image();
+    const wrappedText = type || 'Repository Name';
+    const wrappedScore = score || '';
+
+    wrapped.src = img || 'wrapped1.png';
+
     wrapped.onload = () => {
       console.log('starting to draw');
       ctx.drawImage(wrapped, 0, 0);

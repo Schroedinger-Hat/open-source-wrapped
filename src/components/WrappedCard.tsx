@@ -1,5 +1,5 @@
 import React from 'react';
-import { useWrappedImage } from '../utils/useWrappedImage';
+import { useWrappedImage } from '../hooks/useWrappedImage';
 import { TWrappedCard } from '../types/TWrappedCard';
 
 const WrappedCard = ({ type, score, img }: TWrappedCard) => {
