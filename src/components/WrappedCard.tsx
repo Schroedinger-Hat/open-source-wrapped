@@ -8,6 +8,14 @@ const WrappedCard = ({ type, score, img }: TWrappedCard) => {
   return (
     <div>
       <img src={src} style={{ width: '500px', height: '500px' }} />
+      <img src={src} style={{ width: '500px', height: '500px' }} />
+
+      <img src={src} style={{ width: '500px', height: '500px' }} />
+
+      <img src={src} style={{ width: '500px', height: '500px' }} />
+
+      <img src={src} style={{ width: '500px', height: '500px' }} />
+
     </div>
   );
 };
