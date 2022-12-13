@@ -7,8 +7,6 @@ const WrappedCard = ({ type, score, img, session }: TWrappedCard) => {
   const src = useWrappedImage({ type, score, img });
   const github = useGetGithubInfos(session);
 
-  console.log(github);
-
   return (
     <div>
       <img src={src} style={{ width: '500px', height: '500px' }} />
