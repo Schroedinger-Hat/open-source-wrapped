@@ -1,9 +1,13 @@
 import React from 'react';
+import { useGetGithubInfos } from '../hooks/github';
 import { useWrappedImage } from '../hooks/useWrappedImage';
 import { TWrappedCard } from '../types/TWrappedCard';
 
-const WrappedCard = ({ type, score, img }: TWrappedCard) => {
+const WrappedCard = ({ type, score, img, session }: TWrappedCard) => {
   const src = useWrappedImage({ type, score, img });
+  const github = useGetGithubInfos(session);
+
+  console.log(github);
 
   return (
     <div>
