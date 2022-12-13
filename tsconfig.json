@@ -7,7 +7,7 @@
       "DOM.Iterable",
       "ESNext"
     ],
-    "allowJs": false,
+    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -20,10 +20,9 @@
     "noEmit": true,
     "jsx": "preserve",
     "incremental": true
+    "noUncheckedIndexedAccess": true
   },
-  "include": [
-    "src"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
   "references": [
     {
       "path": "./tsconfig.node.json"
