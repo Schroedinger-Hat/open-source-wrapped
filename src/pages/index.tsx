@@ -13,16 +13,31 @@ function Wrapped() {
               <h1>Open Source Wrapped</h1>
             </div>
             <div className='content-body'>
-              <input type={'text'} className='username' placeholder='Your username' onChange={(e) => setUsername(e.target.value)} />
+              <div className='content-body__wrap'>
+                <input type={'text'} className='username my-1' placeholder='Your username' onChange={(e) => setUsername(e.target.value)} />
+              </div>
             </div>
             <div className='content-footer'>
-              <Link href={`/wrapped/${username}`}>
-                <button disabled={username.length < 1} className='button'>Wrap me up</button>
-              </Link>
+              <div className='content-footer__wrap'>
+                <Link className='button' href={`/wrapped/${username}`}>
+                  Wrap me up
+                </Link>
+                <div className='clearfix' />
+                <small className='text-center'>
+                  Ready only access to profile and commits.
+                  <br/>
+                  No code access, no data persistance.
+                </small>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <footer>
+        <div className='footer__wrap'>
+          Made with ❤️ by <a href='https://www.schrodinger-hat.it' target='_blank'>Schrodinger Hat</a> | <a href='https://github.com/Schrodinger-Hat/open-source-wrapped' target='_blank'>Github</a>
+        </div>
+      </footer>
     </>
   );
 }
