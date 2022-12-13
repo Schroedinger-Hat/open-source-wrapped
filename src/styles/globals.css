@@ -1,0 +1,229 @@
+@font-face {
+  font-family: Gotham;
+  src: url('/fonts/Gotham-Black.otf');
+}
+
+:root {
+  font-family: Gotham, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  /* Cyan */
+  --cyan-100: #b0f2f8;
+  --cyan-200: #a9f4ec;
+  --cyan-300: #baccce;
+  --cyan-400: #93b8bd;
+  --cyan-500: #82afb5;
+  --cyan-600: #40919c;
+  --cyan-700: #1f8693;
+
+  /* Gray */
+  --gray-100: #ffffff;
+  --gray-200: #eceff4;
+  --gray-300: #e0e0e0;
+  --gray-400: #ccd5d6;
+  --gray-500: #bdc3c7;
+  --gray-600: #b5b5b5;
+  --gray-700: #8a8a8a;
+  --gray-800: #858585;
+  --gray-900: #757575;
+
+  /* Noir */
+  --noir-100: #585756;
+  --noir-200: #4b4a49;
+  --noir-300: #4a4a4a;
+  --noir-400: #3e3e3c;
+  --noir-500: #363636;
+  --noir-600: #2f2f2d;
+  --noir-700: #222220;
+  --noir-800: #191815;
+  --noir-900: #171717;
+
+  /* Scarlet red */
+  --scarletRed-100: #ed213a;
+  --scarletRed-200: #e50914;
+
+  /* Bluish cyan */
+  --bluishCyan-100: #c9eafd;
+  --bluishCyan-200: #baedfd;
+  --bluishCyan-300: #a9c3c7;
+  --bluishCyan-400: #6fa6ae;
+  --bluishCyan-500: #6fa1b8;
+  --bluishCyan-600: #599ca6;
+
+  /* Khaki */
+  --khaki-100: #d7c760;
+  --khaki-200: #cbbc67;
+  --khaki-300: #beb16f;
+  --khaki-400: #b2a776;
+  --khaki-500: #a59d7e;
+  --khaki-600: #999585;
+
+  /* Blue violet */
+  --blueViolet-100: #6486dd;
+  --blueViolet-200: #5c7cf0;
+  --blueViolet-300: #5362ac;
+  --blueViolet-400: #2e3440;
+
+  /* Yellow */
+  --yellow-100: #f0e993;
+  --yellow-200: #b8b7ad;
+  --yellow-300: #e3d254;
+  --yellow-400: #eedb49;
+  --yellow-500: #fae738;
+
+  /* Blue */
+  --blue-100: #d7e7f9;
+  --blue-200: #6d94ca;
+  --blue-300: #3e66a3;
+  --blue-400: #1e6899;
+
+  /* Green */
+  --green-100: #59d465;
+  --green-200: #42e04a;
+  --green-300: #12ed20;
+
+  /* Purple magenta */
+  --purpleMagenta-100: #a43eda;
+  --purpleMagenta-200: #b42fe4;
+  --purpleMagenta-300: #c112ed;
+
+  /* Red */
+  --red-100: #93291e;
+  --red-200: #a90000;
+
+  /* Bluish green */
+  --bluishGreen-100: #b3f5cb;
+  --bluishGreen-200: #65c87c;
+
+  /* Greenish cyan */
+  --greenishCyan-100: #a8f5dd;
+  --greenishCyan-200: #71ada4;
+
+  --primary-text: #fff;
+  --secondary-text: var(--noir-900);
+
+  --bg-primary-color: var(--scarletRed-100);
+  --bg-secondary-color: var(--noir-900);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.username {
+  min-height: 2.7em;
+  outline: none;
+  font-size: 14px;
+  padding: 0.3em 0.5em;
+  background-color: var(--noir-300);
+  border: none;
+  border-radius: 0.3em;
+}
+
+.button {
+  border-color: #dbdbdb;
+  border-width: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #ed213a; /* fallback for old browsers */
+  background: linear-gradient(
+    to right,
+    #93291e,
+    #ed213a
+  );
+  border-color: transparent;
+  border-radius: 0.25em;
+  color: #fff;
+  cursor: pointer;
+  justify-content: center;
+  padding: .5em 2.5em;
+  font-size: 1.3em;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.button strong {
+  color: inherit;
+}
+
+.button .icon,
+.button .icon.is-large,
+.button .icon.is-medium,
+.button .icon.is-small {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.button.is-hovered,
+.button:hover {
+  background: linear-gradient(
+    to left,
+    #93291e,
+    #ed213a
+  );
+}
+
+.button.is-focused,
+.button:focus {
+  background: linear-gradient(
+    to left,
+    #93291e,
+    #ed213a
+  );
+}
+
+.button.is-focused:not(:active),
+.button:focus:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(229, 9, 20, 0.25);
+}
+
+.button.is-active,
+.button:active {
+  background: linear-gradient(
+    to left,
+    #93291e,
+    #ed213a
+  );
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+}
