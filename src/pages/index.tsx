@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import LogIn from '../components/LogIn';
