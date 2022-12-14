@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Paris",
+			"country": {
+				"code": "FR",
+				"name": "France"
+			},
+			"subdivision": {
+				"code": "IDF",
+				"name": "Ãle-de-France"
+			},
+			"timezone": "Europe/Paris",
+			"latitude": 48.8323,
+			"longitude": 2.4075
+		},
+		"timestamp": 1671041141794
+	}
+}
