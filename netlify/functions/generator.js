@@ -1,4 +1,4 @@
-const chromium = require('@sparticuz/chromium')
+const chromium = require('chrome-aws-lambda')
 const puppeteer = require('puppeteer-core')
 const fs = require('fs')
 
