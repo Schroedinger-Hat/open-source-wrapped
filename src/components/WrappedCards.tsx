@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
 import { renderToString } from 'react-dom/server'
+<<<<<<< HEAD
 import { useGetGithubInfos } from '../hooks/useGithubInfos';
+=======
+import { useGetGithubInfos } from '../hooks/github';
+>>>>>>> 41ee0a2 (feat: svg as react component)
 import { TWrappedCard } from '../types/TWrappedCard';
 import {
   WelcomeCard,
