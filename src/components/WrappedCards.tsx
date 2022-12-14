@@ -19,35 +19,35 @@ const WrappedCards = ({ session }: TWrappedCard) => {
       element: WelcomeCard,
       params: {
         txt: 'ciaone',
-        nCommits: 0
+        nCommits: 0,
       }
     },
     {
       element: RecapNumTxtCard,
       params: {
         nCommits: 658,
-        txt: 'nope'
-      }
+        txt: 'nope',
+      },
     },
     {
       element: RecapNumStatsCard,
       params: {
         nCommits: 658,
-        txt: 'nope'
+        txt: 'nope',
       }
     },
     {
       element: TopCard,
       params: {
         txt: 'nope',
-        nCommits: 0
+        nCommits: 0,
       }
     },
     {
       element: RecapTopCard,
       params: {
         txt: 'nope',
-        nCommits: 0
+        nCommits: 0,
       }
     }
   ];
@@ -58,12 +58,10 @@ const WrappedCards = ({ session }: TWrappedCard) => {
         return (
           <Image
             key={tpl.element.name}
-            alt="test"
+            alt='test'
             width={400}
             height={800}
-            src={`data:image/svg+xml;base64, ${Buffer.from(
-              renderToString(tpl.element({ ...tpl.params }))
-            ).toString('base64')}`}
+            src={`data:image/svg+xml;base64, ${Buffer.from(renderToString(tpl.element({ ...tpl.params }))).toString('base64')}`}
           />
         );
       })}
