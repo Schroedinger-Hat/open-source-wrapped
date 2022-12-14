@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGetGithubInfos } from '../hooks/useGithubLogin';
+import { useGetGithubInfos } from '../hooks/useGetGithubInfos';
 import { useWrappedImage } from '../hooks/useWrappedImage';
 import { TWrappedCard } from '../types/TWrappedCard';
 
