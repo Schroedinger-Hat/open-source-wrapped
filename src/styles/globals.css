@@ -255,7 +255,22 @@ footer {
 .wrapped__wrap {
   max-width: 85vw;
   white-space: nowrap;
-  overflow-y: auto;
+  overflow-x: auto;
+  flex-direction: row;
+  display: flex;
+}
+
+.header-image__wrap {
+  position: relative;
+}
+
+.header-image__wrap .button {
+  display: flex;
+  width: 70%;
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  font-size: 16px;
 }
 
 @media (prefers-color-scheme: light) {
