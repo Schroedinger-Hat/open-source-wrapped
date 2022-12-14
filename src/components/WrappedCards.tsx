@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { useGetGithubInfos } from '../hooks/useGithubLogin';
+import { useGetGithubInfos } from '../hooks/useGetGithubInfos';
 import { renderToString } from 'react-dom/server'
 import svgString2Image from 'src/utils/svgToPng';
 import { TGitHubUser } from 'src/types/TGithub';
