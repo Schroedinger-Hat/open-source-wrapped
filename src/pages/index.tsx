@@ -18,9 +18,11 @@ function Wrapped() {
                 <LogIn session={session} />
                 {
                   session && session.user ? (
-                    <Link className='button' href={`/wrapped/user`}>
-                      Wrap me up
-                    </Link>
+                    <div className='action'>
+                      <Link className='button' href={`/wrapped/user`}>
+                        Wrap me up
+                      </Link>
+                    </div>
                   ) : (
                     <></>
                   )
