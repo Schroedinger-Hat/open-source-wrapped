@@ -3,6 +3,7 @@ import React from 'react';
 import { useGetGithubInfos } from '../hooks/useGithubLogin';
 import { renderToString } from 'react-dom/server'
 import svgString2Image from 'src/utils/svgToPng';
+import { TGitHubUser } from 'src/types/TGithub';
 import { TWrappedCard } from '../types/TWrappedCard';
 import {
   WelcomeCard,
@@ -13,7 +14,7 @@ import {
 } from './Cards';
 
 const WrappedCards = ({ session }: TWrappedCard) => {
-  const github = useGetGithubInfos(session);
+  const github: TGitHubUser = useGetGithubInfos(session);
 
   const availableTpls = [
     {
