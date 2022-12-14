@@ -4,9 +4,9 @@ const LogIn = ({session}:{session: any}) => {
     return (
         <div className="login">
         {session && session.user ? (
-          <button onClick={() => signOut()}>Sign out</button>
+          <button className="button" onClick={() => signOut()}>Sign out</button>
         ) : (
-          <button onClick={() => signIn()}>Sign in</button>
+          <button className="button" onClick={() => signIn()}>Sign in</button>
         )}
       </div>
     )

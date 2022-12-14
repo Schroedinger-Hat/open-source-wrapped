@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useSession } from "next-auth/react"
+import LogIn from '../components/LogIn';
 
 function Wrapped() {
-  const [username, setUsername] = useState('');
+  const { data: session } = useSession();
 
   return (
     <>
@@ -12,16 +13,18 @@ function Wrapped() {
             <div className='content-header'>
               <h1>Open Source Wrapped</h1>
             </div>
-            <div className='content-body'>
-              <div className='content-body__wrap'>
-                <input type={'text'} className='username my-1' placeholder='Your username' onChange={(e) => setUsername(e.target.value)} />
-              </div>
-            </div>
             <div className='content-footer'>
               <div className='content-footer__wrap'>
-                <Link className='button' href={`/wrapped/${username}`}>
-                  Wrap me up
-                </Link>
+                <LogIn session={session} />
+                {
+                  session && session.user ? (
+                    <Link className='button' href={`/wrapped/user`}>
+                      Wrap me up
+                    </Link>
+                  ) : (
+                    <></>
+                  )
+                }
                 <div className='clearfix' />
                 <small className='text-center'>
                   Ready only access to profile and commits.
