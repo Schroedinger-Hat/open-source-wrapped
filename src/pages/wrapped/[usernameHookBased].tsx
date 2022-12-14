@@ -1,7 +1,7 @@
 import WrappedCard from '@/components/WrappedCardHookBased';
 import { useSession } from 'next-auth/react';
 
-function Wrapped() {
+function WrappedHookBased() {
   const { data: session } = useSession();
 
   return (
