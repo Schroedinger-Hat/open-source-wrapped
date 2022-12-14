@@ -252,6 +252,12 @@ footer {
   margin: auto;
 }
 
+.wrapped__wrap {
+  max-width: 85vw;
+  white-space: nowrap;
+  overflow-y: auto;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
