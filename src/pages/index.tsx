@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Link from 'next/link';
 import { useSession } from "next-auth/react"
 import LogIn from '../components/LogIn';
@@ -19,7 +20,7 @@ function Wrapped() {
                 {
                   session && session.user ? (
                     <div className='action'>
-                      <Link className='button' href={`/wrapped/user`}>
+                      <Link className='button' href={`/wrapped/${session.user.login}`}>
                         Wrap me up
                       </Link>
                     </div>
