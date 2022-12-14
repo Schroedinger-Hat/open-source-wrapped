@@ -7,7 +7,13 @@ function Wrapped() {
   return (
     <div className="Wrapped">
       <div className="wrapped__wrap">
-        <WrappedCards img='' type="Hello SH!" score="10" session={session}/>
+        <WrappedCards
+          img=""
+          phrase=""
+          type="Hello SH!"
+          score="10"
+          session={session}
+        />
       </div>
     </div>
   );
