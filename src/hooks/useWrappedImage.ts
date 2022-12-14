@@ -25,7 +25,6 @@ export const useWrappedImage = ({
     wrapped.src = img || 'wrapped1.png';
 
     wrapped.onload = () => {
-      console.log('starting to draw');
       ctx.drawImage(wrapped, 0, 0);
       ctx.font = '80px Gotham';
       ctx.fillStyle = '#fff';
@@ -47,8 +46,6 @@ export const useWrappedImage = ({
         cw / 2,
         ch / 2 + (actualBoundingBoxAscent - actualBoundingBoxDescent) / 2 + 100
       );
-
-      console.log('finisehd drawings');
 
       setImgSrc(canvas.toDataURL('image/webp', 1.0));
       return imgSrc;
