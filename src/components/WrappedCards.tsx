@@ -1,6 +1,6 @@
 import React from 'react';
 import { TGitHubUser } from 'src/types/TGithub';
-import { useGetGithubInfos } from '../hooks/useGithubLogin';
+import { useGetGithubInfos } from '../hooks/useGetGithubInfos';
 import { TWrappedCard } from '../types/TWrappedCard';
 import WrappedCard from './WrappedCard';
 
