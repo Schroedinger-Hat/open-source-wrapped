@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 function Wrapped() {
   const { data: session } = useSession();
+  console.log(session);
 
   return (
     <div className="Wrapped">
