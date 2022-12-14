@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import { renderToString } from 'react-dom/server';
 import { useGetGithubInfos } from '../hooks/useGithubLogin';
 import { renderToString } from 'react-dom/server'
-import dataURLtoBlob from 'src/utils/dataUrlToBlob';
 import svgString2Image from 'src/utils/svgToPng';
 import { TWrappedCard } from '../types/TWrappedCard';
 import {

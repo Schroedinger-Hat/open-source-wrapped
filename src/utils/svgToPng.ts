@@ -8,8 +8,8 @@ const svgString2Image = (svgString: string, width: number, height: number, forma
     canvas.height = height;
     const image = new Image();
     image.onload = function () {
-        context.clearRect(0, 0, width, height);
-        context.drawImage(image, 0, 0, width, height);
+        context?.clearRect(0, 0, width, height);
+        context?.drawImage(image, 0, 0, width, height);
         var pngData = canvas.toDataURL('image/' + format);
         callback(dataURLtoBlob(pngData));
     };
