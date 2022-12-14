@@ -1,6 +1,6 @@
 export type TWrappedCard = {
   type: string;
   score: string;
-  img?: string;
+  img: string;
   session?: any;
 };

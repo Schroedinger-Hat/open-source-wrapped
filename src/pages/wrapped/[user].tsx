@@ -1,13 +1,14 @@
-import WrappedCard from "@/components/WrappedCard";
+import WrappedCards from "@/components/WrappedCards";
 import { useSession } from 'next-auth/react'
-
 
 function Wrapped() {
   const { data: session } = useSession();
 
   return (
     <div className="Wrapped">
-      <WrappedCard type="Hello SH!" score="10" img="/wrapped3.png"  session={session}/>
+      <div className="wrapped__wrap">
+        <WrappedCards img='' type="Hello SH!" score="10" session={session}/>
+      </div>
     </div>
   );
 }
