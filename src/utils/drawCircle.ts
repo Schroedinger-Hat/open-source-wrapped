@@ -1,6 +1,6 @@
 export const drawCircle = (
   ctx: CanvasRenderingContext2D,
-  canvas: { w: number; h: number; }
+  canvas: { w: number; h: number }
 ) => {
   const centerX = canvas.w / 2;
   const centerY = canvas.h / 2;

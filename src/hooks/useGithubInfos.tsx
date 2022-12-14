@@ -1,16 +1,16 @@
-import { Octokit } from "octokit";
-import { useEffect, useState } from "react";
+import { Octokit } from 'octokit';
+import { useEffect, useState } from 'react';
 
 export const useGetGithubInfos = (session: any) => {
   const [githubInfos, setGithubInfos] = useState<any>(null);
-  const [ghRequest, setGhRequest] = useState(false); 
+  const [ghRequest, setGhRequest] = useState(false);
 
   useEffect(() => {
     if (session && session.user) {
       const gh = new Octokit({
         auth: session.accessToken
-      })
-  
+      });
+
       const _ = async () => {
         const ghQuery = await gh.graphql(
           `query {
@@ -57,13 +57,13 @@ export const useGetGithubInfos = (session: any) => {
             }
           }
           `
-        )
-        setGithubInfos(ghQuery)
-        setGhRequest(true)
-      }
-      _()
+        );
+        setGithubInfos(ghQuery);
+        setGhRequest(true);
+      };
+      _();
     }
-  }, [ghRequest])
-  
-  return githubInfos
-}
+  }, [ghRequest]);
+
+  return githubInfos;
+};

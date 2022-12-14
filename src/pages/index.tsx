@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useSession } from "next-auth/react"
+import { useSession } from 'next-auth/react';
 import LogIn from '../components/LogIn';
 
 function Wrapped() {
@@ -7,30 +7,28 @@ function Wrapped() {
 
   return (
     <>
-      <div className='body-wrap'>
-        <div className='container'>
-          <div className='content-wrap'>
-            <div className='content-header'>
+      <div className="body-wrap">
+        <div className="container">
+          <div className="content-wrap">
+            <div className="content-header">
               <h1>Open Source Wrapped</h1>
             </div>
-            <div className='content-footer'>
-              <div className='content-footer__wrap'>
+            <div className="content-footer">
+              <div className="content-footer__wrap">
                 <LogIn session={session} />
-                {
-                  session && session.user ? (
-                    <div className='action'>
-                      <Link className='button' href={`/wrapped/user`}>
-                        Wrap me up
-                      </Link>
-                    </div>
-                  ) : (
-                    <></>
-                  )
-                }
-                <div className='clearfix' />
-                <small className='text-center'>
+                {session && session.user ? (
+                  <div className="action">
+                    <Link className="button" href={`/wrapped/user`}>
+                      Wrap me up
+                    </Link>
+                  </div>
+                ) : (
+                  <></>
+                )}
+                <div className="clearfix" />
+                <small className="text-center">
                   Ready only access to profile and commits.
-                  <br/>
+                  <br />
                   No code access, no data persistance.
                 </small>
               </div>
@@ -39,8 +37,18 @@ function Wrapped() {
         </div>
       </div>
       <footer>
-        <div className='footer__wrap'>
-          Made with ❤️ by <a href='https://www.schrodinger-hat.it' target='_blank'>Schrodinger Hat</a> | <a href='https://github.com/Schrodinger-Hat/open-source-wrapped' target='_blank'>Github</a>
+        <div className="footer__wrap">
+          Made with ❤️ by{' '}
+          <a href="https://www.schrodinger-hat.it" target="_blank">
+            Schrodinger Hat
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://github.com/Schrodinger-Hat/open-source-wrapped"
+            target="_blank"
+          >
+            Github
+          </a>
         </div>
       </footer>
     </>

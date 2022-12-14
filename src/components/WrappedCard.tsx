@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGetGithubInfos } from '../hooks/github';
+import { useGetGithubInfos } from '../hooks/useGithubInfos';
 import { useWrappedImage } from '../hooks/useWrappedImage';
 import { TWrappedCard } from '../types/TWrappedCard';
 
@@ -11,13 +11,9 @@ const WrappedCard = ({ type, score, img, session }: TWrappedCard) => {
     <div>
       <img src={src} style={{ width: '500px', height: '500px' }} />
       <img src={src} style={{ width: '500px', height: '500px' }} />
-
       <img src={src} style={{ width: '500px', height: '500px' }} />
-
       <img src={src} style={{ width: '500px', height: '500px' }} />
-
       <img src={src} style={{ width: '500px', height: '500px' }} />
-
     </div>
   );
 };

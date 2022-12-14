@@ -172,7 +172,7 @@ h1 {
   display: inline-block;
   margin-top: 1.5em;
   line-height: 12px;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 100;
   font-family: sans-serif;
 }
@@ -183,17 +183,13 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   background: #ed213a; /* fallback for old browsers */
-  background: linear-gradient(
-    to right,
-    #93291e,
-    #ed213a
-  );
+  background: linear-gradient(to right, #93291e, #ed213a);
   border-color: transparent;
   border-radius: 0.25em;
   color: #fff;
   cursor: pointer;
   justify-content: center;
-  padding: .5em 2.5em;
+  padding: 0.5em 2.5em;
   font-size: 1.3em;
   text-align: center;
   white-space: nowrap;
@@ -214,20 +210,12 @@ h1 {
 
 .button.is-hovered,
 .button:hover {
-  background: linear-gradient(
-    to left,
-    #93291e,
-    #ed213a
-  );
+  background: linear-gradient(to left, #93291e, #ed213a);
 }
 
 .button.is-focused,
 .button:focus {
-  background: linear-gradient(
-    to left,
-    #93291e,
-    #ed213a
-  );
+  background: linear-gradient(to left, #93291e, #ed213a);
 }
 
 .button.is-focused:not(:active),
@@ -237,11 +225,7 @@ h1 {
 
 .button.is-active,
 .button:active {
-  background: linear-gradient(
-    to left,
-    #93291e,
-    #ed213a
-  );
+  background: linear-gradient(to left, #93291e, #ed213a);
 }
 
 footer {
