@@ -43,6 +43,7 @@ export const useGetGithubInfos = (session: any): TGitHubUser => {
                 edges {
                   node {
                     name
+                    stargazerCount
                   }
                 }
               }

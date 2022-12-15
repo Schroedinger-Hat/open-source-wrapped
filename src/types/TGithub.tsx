@@ -51,4 +51,5 @@ export type TEdge = {
 
 export type TNode = {
     name: string;
+    stargazerCount?: number;
 }
