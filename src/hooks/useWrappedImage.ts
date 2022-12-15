@@ -77,9 +77,7 @@ export const useWrappedImage = ({
           ctx.fillText(
             wrappedText,
             cw / 2,
-            ch / 2 +
-              (actualBoundingBoxAscent - actualBoundingBoxDescent) / 2 -
-              20
+            ch - 150
           );
 
           if (githubInfos) {
@@ -87,42 +85,40 @@ export const useWrappedImage = ({
               githubInfos?.user.contributionsCollection
                 .totalCommitContributions;
 
-            // Commits text
-            ctx.fillText(
-              commitsText.toString(),
-              cw / 2,
-              ch / 2 +
-                (actualBoundingBoxAscent - actualBoundingBoxDescent) / 2 +
-                30
-            );
-
             ctx.fillStyle = '#65DB23';
             ctx.fillRect(0, 80, cw, 80);
 
             ctx.fillStyle = '#DB5018';
             ctx.fillRect(0, 160, cw, 80);
-            ctx.fillStyle = '#000';
+            ctx.fillStyle = '#F675C2';
             ctx.fillText(commitsText.toString(), cw / 2, 125);
 
             ctx.fillStyle = '#F675C2';
             ctx.fillRect(0, 240, cw, 80);
             ctx.fillStyle = '#000';
             ctx.fillText(commitsText.toString(), cw / 2, 205);
+            ctx.fillStyle = '#65DB23';
             ctx.fillText(commitsText.toString(), cw / 2, 280);
 
             ctx.fillStyle = '#DB5018';
+            ctx.fillRect(0, 320, cw, 80);
+            ctx.fillStyle = '#F675C2';
+            ctx.fillText(commitsText.toString(), cw / 2, 360);
+
+            ctx.fillStyle = '#65DB23';
+            ctx.fillRect(0, 400, cw, 80);
+            ctx.fillStyle = '#F675C2';
+            ctx.fillText(commitsText.toString(), cw / 2, 440);
+
+            ctx.fillStyle = '#F675C2';
             ctx.fillRect(0, 480, cw, 80);
             ctx.fillStyle = '#000';
             ctx.fillText(commitsText.toString(), cw / 2, 520);
-
-            ctx.fillStyle = '#65DB23';
-            ctx.fillRect(0, 560, cw, 80);
-            ctx.fillStyle = '#000';
-            ctx.fillText(commitsText.toString(), cw / 2, 600);
           }
 
           // osday text
           ctx.font = '2em Gotham';
+          ctx.textAlign = 'center';
           ctx.fillText('#githubwrapped2022', cw - 120, ch - 32);
 
           break;
@@ -258,15 +254,17 @@ export const useWrappedImage = ({
                 (item: any, idx: number) => {
                   if (item.node) {
                     ctx.fillStyle = '#F2FF47';
-                    ctx.font = '1.3em Gotham';
+                    ctx.font = '1.8em Gotham';
                     ctx.fillText(
-                      item.node.name,
+                      item.node.name.length > 20
+                        ? item.node.name.substr(0, 20) + '...'
+                        : item.node.name,
                       cw / 2 - 140,
                       ch / 2 +
                         (actualBoundingBoxAscent - actualBoundingBoxDescent) /
                           2 +
                         120 +
-                        idx * 15
+                        idx * 18
                     );
                   }
                 }
@@ -278,15 +276,17 @@ export const useWrappedImage = ({
                 (item: any, idx: number) => {
                   if (item) {
                     ctx.fillStyle = '#F2FF47';
-                    ctx.font = '1.3em Gotham';
+                    ctx.font = '1.8em Gotham';
                     ctx.fillText(
-                      item.repository.name.substr(0, 15) + '...',
+                      item.repository.name.length > 20
+                        ? item.repository.name.substr(0, 20) + '...'
+                        : item.repository.name,
                       cw / 2 - 100,
                       ch / 2 +
                         (actualBoundingBoxAscent - actualBoundingBoxDescent) /
                           2 +
                         240 +
-                        idx * 15
+                        idx * 18
                     );
 
                     ctx.fillText(
@@ -296,7 +296,7 @@ export const useWrappedImage = ({
                         (actualBoundingBoxAscent - actualBoundingBoxDescent) /
                           2 +
                         240 +
-                        idx * 15
+                        idx * 18
                     );
                   }
                 }
