@@ -30,7 +30,7 @@ function Wrapped() {
                 }
                 <div className='clearfix' />
                 <small className='text-center'>
-                  Ready only access to profile and commits.
+                  Read-only access to public information.
                   <br/>
                   No code access, no data persistance.
                 </small>
