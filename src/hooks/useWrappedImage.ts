@@ -227,7 +227,7 @@ export const useWrappedImage = ({
               ctx.font = '1.5em Gotham';
               ctx.textAlign = 'left';
               ctx.fillText(
-                'Top Repos',
+                'Top Repos and 🌟',
                 cw / 2 - 140,
                 ch / 2 +
                   (actualBoundingBoxAscent - actualBoundingBoxDescent) / 2 +
@@ -254,6 +254,16 @@ export const useWrappedImage = ({
                       item.node.name.length > 20
                         ? item.node.name.substr(0, 20) + '...'
                         : item.node.name,
+                      cw / 2 - 100,
+                      ch / 2 +
+                        (actualBoundingBoxAscent - actualBoundingBoxDescent) /
+                          2 +
+                        120 +
+                        idx * 18
+                    );
+
+                    ctx.fillText(
+                      item.node.stargazerCount,
                       cw / 2 - 140,
                       ch / 2 +
                         (actualBoundingBoxAscent - actualBoundingBoxDescent) /
