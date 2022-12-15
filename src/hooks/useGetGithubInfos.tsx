@@ -1,7 +1,8 @@
 import { Octokit } from "octokit";
 import { useEffect, useState } from "react";
+import { TGitHubUser } from "src/types/TGithub";
 
-export const useGetGithubInfos = (session: any) => {
+export const useGetGithubInfos = (session: any): TGitHubUser => {
   const [githubInfos, setGithubInfos] = useState<any>(null);
   const [ghRequest, setGhRequest] = useState(false); 
 
@@ -22,35 +23,33 @@ export const useGetGithubInfos = (session: any) => {
                 to: "2022-12-31T23:59:59Z"
               ) {
                 totalCommitContributions
-                totalIssueContributions
-                totalRepositoryContributions
-                totalPullRequestContributions
-                commitContributionsByRepository {
+                commitContributionsByRepository(maxRepositories: 5) {
                   repository {
                     name
                     languages(first: 100) {
-                      nodes {
-                        name
-                      }
-                    }
-                  }
-                  contributions(first: 5, orderBy: {field: COMMIT_COUNT, direction: DESC}) {
-                    totalCount
-                  }
-                }
-                user {
-                  topRepositories(first: 5, orderBy: {field: STARGAZERS, direction: DESC}) {
-                    edges {
-                      node {
-                        name
-                        stargazerCount
-                        languages(first: 100) {
-                          nodes {
-                            name
-                          }
+                      edges {
+                        node {
+                          name
                         }
                       }
                     }
+                  }
+                  contributions(first: 1, orderBy: {field: COMMIT_COUNT, direction: DESC}) {
+                    totalCount
+                  }
+                }
+              }
+              repositories(first: 5, orderBy: {field: STARGAZERS, direction: DESC}) {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              topRepositories(first:5, orderBy: {field: STARGAZERS, direction: DESC}) {
+                edges {
+                  node {
+                    name
                   }
                 }
               }
