@@ -8,15 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^7.0.0",
     "next": "^13.0.6",
     "next-auth": "^4.18.6",
     "octokit": "^2.0.10",
-    "puppeteer-core": "^7.0.4",
+    "puppeteer-core": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@sparticuz/chromium": "^109.0.0",
     "@types/node": "18.11.13",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
