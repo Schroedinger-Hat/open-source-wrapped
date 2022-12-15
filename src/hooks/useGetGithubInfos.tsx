@@ -2,7 +2,10 @@ import { Octokit } from 'octokit';
 import { useEffect, useState } from 'react';
 import { TGitHubUser } from 'src/types/TGithub';
 
-export const useGetGithubInfos = (session: any): TGitHubUser => {
+export const useGetGithubInfos = (
+  session: any,
+  setImgReady: any
+): TGitHubUser => {
   const [githubInfos, setGithubInfos] = useState<any>(null);
   const [ghRequest, setGhRequest] = useState(false);
 
@@ -60,6 +63,7 @@ export const useGetGithubInfos = (session: any): TGitHubUser => {
         );
         setGithubInfos(ghQuery);
         setGhRequest(true);
+        setImgReady(true);
       };
       _();
     }

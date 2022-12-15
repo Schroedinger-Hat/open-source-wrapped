@@ -4,4 +4,5 @@ export type TWrappedCard = {
   score: string;
   img: string;
   session?: any;
+  githubInfos?: any;
 };

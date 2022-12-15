@@ -1,13 +1,21 @@
 import React from 'react';
-import { useGetGithubInfos } from '../hooks/useGetGithubInfos';
 import { useWrappedImage } from '../hooks/useWrappedImage';
 import { TWrappedCard } from '../types/TWrappedCard';
 
-const WrappedCard = ({ type, phrase, score, img, session }: TWrappedCard) => {
-  const src = useWrappedImage({ type, phrase, score, img });
-  const github = useGetGithubInfos(session);
+const WrappedCard = ({
+  type,
+  phrase,
+  score,
+  img,
+  githubInfos
+}: TWrappedCard) => {
+  const src = useWrappedImage({ type, phrase, score, img, githubInfos });
 
-  return <img src={src} />;
+  if (src) {
+    return <img src={src} />;
+  }
+
+  return null;
 };
 
 export default WrappedCard;

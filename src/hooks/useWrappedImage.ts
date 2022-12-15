@@ -4,8 +4,8 @@ import { TWrappedCard } from '../types/TWrappedCard';
 export const useWrappedImage = ({
   type,
   phrase,
-  score,
-  img
+  img,
+  githubInfos
 }: TWrappedCard): undefined | string => {
   const [imgSrc, setImgSrc] = useState<undefined | string>(undefined);
 
@@ -21,7 +21,6 @@ export const useWrappedImage = ({
 
     const wrapped = new Image();
     const wrappedText = phrase || 'Repository Name';
-    const wrappedScore = score || '';
 
     wrapped.src = img || 'wrapped1.png';
 
@@ -70,8 +69,64 @@ export const useWrappedImage = ({
             ch / 2 + (actualBoundingBoxAscent - actualBoundingBoxDescent) / 2
           );
 
+          if (githubInfos) {
+            const commitsText =
+              githubInfos?.user.contributionsCollection
+                .totalCommitContributions;
+
+            // Commits text
+            ctx.fillText(
+              commitsText.toString(),
+              cw / 2,
+              ch / 2 +
+                (actualBoundingBoxAscent - actualBoundingBoxDescent) / 2 +
+                50
+            );
+          }
+
           break;
         case 'best_repo':
+          ctx.font = '3em Gotham';
+          ctx.fillStyle = '#fff';
+          ctx.textBaseline = 'middle';
+          ctx.textAlign = 'center';
+
+          const wrappedTextBestRepo1 = wrappedText.split('|')[0];
+          const wrappedTextBestRepo2 = wrappedText.split('|')[1];
+
+          // Main text
+          ctx.fillText(
+            wrappedTextBestRepo1,
+            cw / 2,
+            ch / 2 +
+              (actualBoundingBoxAscent - actualBoundingBoxDescent) / 2 -
+              130
+          );
+
+          // Score
+          ctx.fillText(
+            wrappedTextBestRepo2,
+            cw / 2,
+            ch / 2 +
+              (actualBoundingBoxAscent - actualBoundingBoxDescent) / 2 -
+              100
+          );
+
+          if (githubInfos) {
+            const bestRepoText =
+              githubInfos?.user.topRepositories.edges[0].node.name;
+
+            // Commits text
+            ctx.fillText(
+              bestRepoText.toString(),
+              cw / 2,
+              ch / 2 +
+                (actualBoundingBoxAscent - actualBoundingBoxDescent) / 2 +
+                150
+            );
+          }
+
+          break;
           break;
         default:
           break;
