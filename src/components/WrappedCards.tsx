@@ -28,9 +28,16 @@ const WrappedCards = ({ session }: TWrappedCard) => {
           />
           <WrappedCard
             type="best_repo"
-            phrase="Your best|repository!"
+            phrase="🎉 Your best|repository!"
             score="10"
             img="/w3.svg"
+            githubInfos={githubInfos}
+          />
+          <WrappedCard
+            type="best_all"
+            phrase="Nicely done :)"
+            score="10"
+            img="/w4.svg"
             githubInfos={githubInfos}
           />
         </div>
