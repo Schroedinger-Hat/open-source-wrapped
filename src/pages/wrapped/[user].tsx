@@ -1,5 +1,5 @@
-import WrappedCards from "@/components/WrappedCards";
-import { useSession } from 'next-auth/react'
+import WrappedCards from '@/components/WrappedCards';
+import { useSession } from 'next-auth/react';
 
 function Wrapped() {
   const { data: session } = useSession();
