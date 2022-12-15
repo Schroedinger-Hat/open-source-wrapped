@@ -122,7 +122,7 @@ export const useWrappedImage = ({
 
           // osday text
           ctx.font = '2em Gotham';
-          ctx.fillText('osday.dev', cw - 80, ch - 32);
+          ctx.fillText('#githubwrapped2022', cw - 120, ch - 32);
 
           break;
         case 'best_repo':
@@ -173,7 +173,7 @@ export const useWrappedImage = ({
 
           // osday text
           ctx.font = '2em Gotham';
-          ctx.fillText('osday.dev', cw - 80, ch - 32);
+          ctx.fillText('#githubwrapped2022', cw - 120, ch - 32);
 
           break;
         case 'best_all':
@@ -302,7 +302,7 @@ export const useWrappedImage = ({
               // osday text
               ctx.font = '2em Gotham';
               ctx.textAlign = 'center';
-              ctx.fillText('osday.dev', cw - 80, ch - 32);
+              ctx.fillText('#githubwrapped2022', cw - 120, ch - 32);
 
               setImgSrc(canvas.toDataURL('image/webp', 1.0));
             };
