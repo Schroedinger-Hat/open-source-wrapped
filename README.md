@@ -55,23 +55,20 @@ This is the repository of the application Open Source Wrapped, a Spotify Wrapped
 
 ### Tech stack
 
-- [React.js](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Next Auth](https://next-auth.js.org/)
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-First, install the dependencies and run the development server:
+- Create an OAuth App on [GitHub](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) in order to enable login with GitHub
+- Create `.env.local` file with all the necessary infos, see `.env.example`
+- Install the dependencies with ```npm ci``` or ```yarn```
+- Run the development server with ```npm run dev``` or ```yarn dev```
 
-```bash
-npm ci
-npm run dev
-# or
-yarn
-yarn dev
-```
 
-Open [http://localhost:5173](http://localhost:5173) with your browser to see the result. You can change the port with `--port`flag.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can change the port with `--port`flag.
 
 <!-- CONTRIBUTING -->
 
