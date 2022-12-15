@@ -273,6 +273,12 @@ footer {
   font-size: 16px;
 }
 
+.Wrapped img {
+  width: 200px;
+  height: auto;
+  margin: 1rem 2rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

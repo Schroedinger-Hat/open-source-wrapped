@@ -1,89 +1,51 @@
-import Image from 'next/image';
-import React from 'react';
-import { useGetGithubInfos } from '../hooks/useGetGithubInfos';
-import { renderToString } from 'react-dom/server'
-import svgString2Image from 'src/utils/svgToPng';
+import React, { useState } from 'react';
+import { useGetGithubInfos } from 'src/hooks/useGetGithubInfos';
 import { TGitHubUser } from 'src/types/TGithub';
 import { TWrappedCard } from '../types/TWrappedCard';
-import {
-  WelcomeCard,
-  RecapNumTxtCard,
-  RecapNumStatsCard,
-  TopCard,
-  RecapTopCard
-} from './Cards';
+import WrappedCard from './WrappedCard';
 
 const WrappedCards = ({ session }: TWrappedCard) => {
-  const github: TGitHubUser = useGetGithubInfos(session);
+  const [imgReady, setImgReady] = useState(false);
+  const githubInfos: TGitHubUser = useGetGithubInfos(session, setImgReady);
 
-  const availableTpls = [
-    {
-      element: WelcomeCard,
-      params: {
-        txt: 'ciaone',
-        nCommits: 0
-      }
-    },
-    {
-      element: RecapNumTxtCard,
-      params: {
-        nCommits: 658,
-        txt: 'nope'
-      }
-    },
-    {
-      element: RecapNumStatsCard,
-      params: {
-        nCommits: 658,
-        txt: 'nope'
-      }
-    },
-    {
-      element: TopCard,
-      params: {
-        txt: 'nope',
-        nCommits: 0
-      }
-    },
-    {
-      element: RecapTopCard,
-      params: {
-        txt: 'nope',
-        nCommits: 0
-      }
-    }
-  ];
+  if (imgReady) {
+    return (
+      <>
+        <div className="Wrapped">
+          <WrappedCard
+            type="welcome"
+            phrase="Open Source|Wrapped"
+            score="10"
+            img="/w1.svg"
+            githubInfos={githubInfos}
+          />
+          <WrappedCard
+            type="commits"
+            phrase="Commits"
+            score="10"
+            img="/w2.svg"
+            githubInfos={githubInfos}
+          />
+          <WrappedCard
+            type="best_repo"
+            phrase="🎉 Your best|language!"
+            score="10"
+            img="/w3.svg"
+            githubInfos={githubInfos}
+          />
+          <WrappedCard
+            type="best_all"
+            phrase="Nicely done :)"
+            score="10"
+            img="/w4.svg"
+            githubInfos={githubInfos}
+          />
+        </div>
+      </>
+    );
+  }
 
-  return (
-    <>
-      {availableTpls.map((tpl) => {
-        const xmlString = `data:image/svg+xml;base64, ${Buffer.from(renderToString(tpl.element({ ...tpl.params }))).toString('base64')}`;
-        return (
-          <div className='image-slide'>
-            <div className='header-image'>
-              <div className='header-image__wrap'>
-                <span className="button" onClick={(e) => {
-                  e.preventDefault();
-                  svgString2Image(xmlString, 360, 800, 'png', function (bPng: Blob){ window.open(URL.createObjectURL(bPng)) })
-                }}>
-                  Download & Share
-                </span>
-              </div>
-            </div>
-            <Image
-                key={tpl.element.name}
-                alt="test"
-                width={400}
-                height={800}
-                src={`data:image/svg+xml;base64, ${Buffer.from(
-                  renderToString(tpl.element({ ...tpl.params }))
-                ).toString('base64')}`}
-              />
-          </div>
-        );
-      })}
-    </>
-  );
+  return null;
 };
 
 export default WrappedCards;
