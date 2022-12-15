@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { getTopLanguage } from 'src/utils/github';
 import { TWrappedCard } from '../types/TWrappedCard';
 
 export const useWrappedImage = ({
@@ -161,9 +162,11 @@ export const useWrappedImage = ({
             const bestRepoText =
               githubInfos?.user.topRepositories.edges[0].node.name;
 
+            const topLanguage = getTopLanguage(githubInfos);
+
             // Commits text
             ctx.fillText(
-              bestRepoText.toString(),
+              topLanguage,
               cw / 2,
               ch / 2 +
                 (actualBoundingBoxAscent - actualBoundingBoxDescent) / 2 +
