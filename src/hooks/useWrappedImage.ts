@@ -74,11 +74,7 @@ export const useWrappedImage = ({
           ctx.drawImage(shImg, cw - 340, ch - 50, 32, 32);
 
           // Main text
-          ctx.fillText(
-            wrappedText,
-            cw / 2,
-            ch - 150
-          );
+          ctx.fillText(wrappedText, cw / 2, ch - 220);
 
           if (githubInfos) {
             const commitsText =
@@ -86,34 +82,34 @@ export const useWrappedImage = ({
                 .totalCommitContributions;
 
             ctx.fillStyle = '#65DB23';
-            ctx.fillRect(0, 80, cw, 80);
+            ctx.fillRect(0, 80, cw, 60);
+            ctx.fillStyle = '#F675C2';
+            ctx.fillText(commitsText.toString(), cw / 2, 110);
 
             ctx.fillStyle = '#DB5018';
-            ctx.fillRect(0, 160, cw, 80);
-            ctx.fillStyle = '#F675C2';
-            ctx.fillText(commitsText.toString(), cw / 2, 125);
+            ctx.fillRect(0, 140, cw, 60);
+            ctx.fillStyle = '#000';
+            ctx.fillText(commitsText.toString(), cw / 2, 170);
 
             ctx.fillStyle = '#F675C2';
-            ctx.fillRect(0, 240, cw, 80);
-            ctx.fillStyle = '#000';
-            ctx.fillText(commitsText.toString(), cw / 2, 205);
+            ctx.fillRect(0, 200, cw, 60);
             ctx.fillStyle = '#65DB23';
-            ctx.fillText(commitsText.toString(), cw / 2, 280);
+            ctx.fillText(commitsText.toString(), cw / 2, 230);
 
             ctx.fillStyle = '#DB5018';
-            ctx.fillRect(0, 320, cw, 80);
+            ctx.fillRect(0, 260, cw, 60);
             ctx.fillStyle = '#F675C2';
-            ctx.fillText(commitsText.toString(), cw / 2, 360);
+            ctx.fillText(commitsText.toString(), cw / 2, 290);
 
             ctx.fillStyle = '#65DB23';
-            ctx.fillRect(0, 400, cw, 80);
+            ctx.fillRect(0, 320, cw, 60);
             ctx.fillStyle = '#F675C2';
-            ctx.fillText(commitsText.toString(), cw / 2, 440);
+            ctx.fillText(commitsText.toString(), cw / 2, 350);
 
             ctx.fillStyle = '#F675C2';
-            ctx.fillRect(0, 480, cw, 80);
+            ctx.fillRect(0, 380, cw, 60);
             ctx.fillStyle = '#000';
-            ctx.fillText(commitsText.toString(), cw / 2, 520);
+            ctx.fillText(commitsText.toString(), cw / 2, 410);
           }
 
           // osday text
@@ -160,13 +156,12 @@ export const useWrappedImage = ({
 
             const topLanguage = getTopLanguage(githubInfos);
 
-            // Commits text
+            // Lang text
+            ctx.font = '5em Gotham';
             ctx.fillText(
               topLanguage,
               cw / 2,
-              ch / 2 +
-                (actualBoundingBoxAscent - actualBoundingBoxDescent) / 2 +
-                150
+              ch - 220
             );
           }
 
