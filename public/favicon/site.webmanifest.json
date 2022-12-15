@@ -1,0 +1,31 @@
+{
+  "name": "Open Source Wrapped",
+  "short_name": "OSW",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#90cdf4",
+  "theme_color": "#90cdf4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon/72x72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/favicon/96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/favicon/128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/favicon/512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

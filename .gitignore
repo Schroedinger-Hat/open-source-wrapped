@@ -28,3 +28,7 @@ dist-ssr
 *.sw?
 # Local Netlify folder
 .netlify
+
+# local Mac files and dirs
+.DS_Store
+__MACOSX
