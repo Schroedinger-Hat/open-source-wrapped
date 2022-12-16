@@ -266,9 +266,9 @@ footer {
 
 .header-image__wrap .button {
   display: flex;
-  width: 70%;
+  width: 45.5%;
   position: absolute;
-  left: 20px;
+  left: 32px;
   top: 0px;
   font-size: 16px;
 }

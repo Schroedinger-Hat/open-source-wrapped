@@ -1,9 +1,16 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 export default function Layout({ children }: any) {
+  const router = useRouter();
+  const { user = '' } = router.query;
+
   return (
     <>
       <Head>
+        <title>Open Source Wrapped - By Schrodinger Hat'</title>
+        <meta name='Description' content='Wrap your Github open source profile for the end of the year' />
+        <link rel="icon" type="image/png" href="/sh.png" /> 
         <meta property="og:url" content="https://wrapped.schrodinger-hat.it" />
         <meta property="og:type" content="website" />
         <meta
@@ -16,7 +23,7 @@ export default function Layout({ children }: any) {
         />
         <meta
           property="og:image"
-          content="https://wrapped.schrodinger-hat.it/.netlify/functions/generator"
+          content={`https://wrapped.schrodinger-hat.it/.netlify/functions/generator?username=${user}`}
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -35,7 +42,7 @@ export default function Layout({ children }: any) {
         />
         <meta
           name="twitter:image"
-          content="https://wrapped.schrodinger-hat.it/.netlify/functions/generator"
+          content={`https://wrapped.schrodinger-hat.it/.netlify/functions/generator?username=${user}`}
         />
       </Head>
       <main>{children}</main>

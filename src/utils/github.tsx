@@ -7,9 +7,9 @@ export function getTopLanguage(githubInfos: TGitHubUser) : string {
 
     const languageMap = githubInfos.user.contributionsCollection.commitContributionsByRepository
     .flatMap(
-        (contribs: TCommitContributionsByRepository) => contribs.repository.languages.edges
+        (contribs: TCommitContributionsByRepository) => contribs.repository.languages?.edges
     ).flatMap(
-        (edge: TEdge) => edge.node.name
+        (edge: TEdge) => edge?.node.name
     ).reduce( (acc, val) => {
         // @ts-ignore
         acc[val] = (acc[val] || 0) + 1
