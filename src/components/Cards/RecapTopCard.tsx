@@ -24,9 +24,9 @@ const RecapTopCard = (githubInfos: any, img: any) => {
                 <g clipPath="url(#clip2_10_1203)">
                     <path d="M177.937 150.583C178.975 149.247 180.994 149.247 182.032 150.583L205.228 180.447C229.118 211.205 256.764 238.851 287.521 262.741L317.386 285.937C318.722 286.975 318.722 288.994 317.386 290.032L287.521 313.228C256.764 337.118 229.118 364.764 205.228 395.521L182.032 425.386C180.994 426.722 178.975 426.722 177.937 425.386L154.741 395.521C130.851 364.764 103.205 337.118 72.4474 313.228L42.583 290.032C41.2467 288.994 41.2467 286.975 42.583 285.937L72.4474 262.741C103.205 238.851 130.851 211.205 154.741 180.447L177.937 150.583Z" fill="#F675C2" />
                 </g>
-                <text textAnchor="middle" fill="#e2e441" xmlSpace="preserve" style={{whiteSpace: 'pre'}} alignmentBaseline="central" fontFamily="Red Hat Display" fontSize="35" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.614" y="480.704">{usernamePadded}</tspan></text>
+                <text textAnchor="middle" fill="#e2e441" xmlSpace="preserve" style={{whiteSpace: 'pre'}} alignmentBaseline="central" fontFamily="Avenir" fontSize="35" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.614" y="480.704">{usernamePadded}</tspan></text>
                 <g clipPath="url(#clip3_10_1203)">
-                    <text fill="#fff" xmlSpace="preserve" fontFamily="Red Hat Display" fontSize="16" fontWeight="500" letterSpacing="0em"><tspan x="32.6562" y="520.991">Top Repos and 🌟</tspan></text>
+                    <text fill="#fff" xmlSpace="preserve" fontFamily="Avenir" fontSize="16" fontWeight="500" letterSpacing="0em"><tspan x="32.6562" y="520.991">Top Repos and 🌟</tspan></text>
                     {githubInfos?.user.repositories?.edges.map(
                         (item: any, idx: number) => {
                             let txt = '';
@@ -39,12 +39,12 @@ const RecapTopCard = (githubInfos: any, img: any) => {
                             }
 
                             return (
-                                <text fill="#e2e441" xmlSpace="preserve" fontFamily="Red Hat Display" fontSize="15" fontWeight="500" letterSpacing="0em"><tspan x="32.8594" y={y}>{txt}</tspan></text>
+                                <text fill="#e2e441" xmlSpace="preserve" fontFamily="Avenir" fontSize="15" fontWeight="500" letterSpacing="0em"><tspan x="32.8594" y={y}>{txt}</tspan></text>
                             );
                         }
                     )}
 
-                    <text fill="#fff" xmlSpace="preserve" fontFamily="Red Hat Display" fontSize="16" fontWeight="500" letterSpacing="0em"><tspan x="210.041" y="520.991">Top Commits</tspan></text>
+                    <text fill="#fff" xmlSpace="preserve" fontFamily="Avenir" fontSize="16" fontWeight="500" letterSpacing="0em"><tspan x="210.041" y="520.991">Top Commits</tspan></text>
                     {githubInfos?.user.contributionsCollection?.commitContributionsByRepository.map(
                         (item: any, idx: number) => {
                             let txt = '';
@@ -57,14 +57,14 @@ const RecapTopCard = (githubInfos: any, img: any) => {
                             }
 
                             return (
-                                <text fill="#e2e441" xmlSpace="preserve" fontFamily="Red Hat Display" fontSize="15" fontWeight="500" letterSpacing="0em"><tspan x="210.8594" y={y}>{txt}</tspan></text>
+                                <text fill="#e2e441" xmlSpace="preserve" fontFamily="Avenir" fontSize="15" fontWeight="500" letterSpacing="0em"><tspan x="210.8594" y={y}>{txt}</tspan></text>
                             );
                         }
                     )}
                 </g>
                 <g clipPath="url(#clip4_10_1203)">
                     <rect x="16" y="714" width="62" height="63" fill="url(#pattern0)" />
-                    <text fill="#e2e441" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Red Hat Display" fontSize="20" fontWeight="500" letterSpacing="0em"><tspan x="140.934" y="752.134">#githubwrapped2022</tspan></text>
+                    <text fill="#e2e441" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Avenir" fontSize="20" fontWeight="500" letterSpacing="0em"><tspan x="140.934" y="752.134">#githubwrapped2022</tspan></text>
                 </g>
                 <rect x="98" y="206" width="159.131" height="164" fill="url(#pattern1)" />
                 <defs>

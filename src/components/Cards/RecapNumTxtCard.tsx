@@ -9,20 +9,20 @@ const RecapNumTxtCard = ({ nCommits, txt }: { nCommits: number, txt: string }) =
                 </mask>
                 <g mask="url(#mask0_8_4103)">
                     <rect width="280" height="60.6667" transform="translate(40 162)" fill="#11D861" />
-                    <text textAnchor="middle" fill="#000100" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Red Hat Display" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.1111" y="224.67">{nCommits}</tspan></text>
+                    <text textAnchor="middle" fill="#000100" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Avenir" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.1111" y="224.67">{nCommits}</tspan></text>
                     <rect width="280" height="60.6667" transform="translate(40 222.667)" fill="#F675C2" />
-                    <text textAnchor="middle" fill="#000100" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Red Hat Display" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.1111" y="285.337">{nCommits}</tspan></text>
+                    <text textAnchor="middle" fill="#000100" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Avenir" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.1111" y="285.337">{nCommits}</tspan></text>
                     <rect width="280" height="60.6667" transform="translate(40 283.333)" fill="#B75F0D" />
-                    <text textAnchor="middle" fill="#000100" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Red Hat Display" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.1111" y="346.004">{nCommits}</tspan></text>
+                    <text textAnchor="middle" fill="#000100" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Avenir" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.1111" y="346.004">{nCommits}</tspan></text>
                     <rect width="280" height="60.6667" transform="translate(40 344)" fill="#6900BA" />
-                    <text textAnchor="middle" fill="#E1E43F" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Red Hat Display" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.1111" y="406.67">{nCommits}</tspan></text>
+                    <text textAnchor="middle" fill="#E1E43F" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Avenir" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.1111" y="406.67">{nCommits}</tspan></text>
                     <rect width="280" height="60.6667" transform="translate(40 404.667)" fill="#000100" />
-                    <text textAnchor="middle" fill="#B75F0D" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Red Hat Display" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.1111" y="467.337">{nCommits}</tspan></text>
+                    <text textAnchor="middle" fill="#B75F0D" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Avenir" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.1111" y="467.337">{nCommits}</tspan></text>
                 </g>
-                <text fill="#000100" xmlSpace="preserve" style={{whiteSpace: 'pre'}} alignmentBaseline="central" fontFamily="Red Hat Display" fontSize="50" fontWeight="500" letterSpacing="-0.02em"><tspan x="80.614" y="650.704">{txt}</tspan></text>
+                <text fill="#000100" xmlSpace="preserve" style={{whiteSpace: 'pre'}} alignmentBaseline="central" fontFamily="Avenir" fontSize="50" fontWeight="500" letterSpacing="-0.02em"><tspan x="80.614" y="650.704">{txt}</tspan></text>
                 <g clipPath="url(#clip0_8_4103)">
                     <rect x="16" y="716" width="62" height="63" fill="url(#pattern0)" />
-                    <text fill="#1B1716" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Red Hat Display" fontSize="20" fontWeight="500" letterSpacing="0em"><tspan x="140.934" y="752.134">#githubwrapped2022</tspan></text>
+                    <text fill="#1B1716" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Avenir" fontSize="20" fontWeight="500" letterSpacing="0em"><tspan x="140.934" y="752.134">#githubwrapped2022</tspan></text>
                 </g>
                 <defs>
                     <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
