@@ -67,7 +67,13 @@ export const useGetGithubInfos = (
       };
       _();
     }
-  }, [ghRequest]);
+
+    return () => {
+      if (githubInfos !== null && session.user !== undefined) {
+        setGhRequest(false);
+      }
+    }
+  }, [ghRequest, session]);
 
   return githubInfos;
 };
