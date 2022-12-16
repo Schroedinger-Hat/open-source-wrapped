@@ -62,7 +62,7 @@ const WrappedCards = ({ session }: TWrappedCard) => {
                 <div className='header-image__wrap'>
                   <span className="button" onClick={(e) => {
                     e.preventDefault();
-                    svgString2Image(card.xmlString, 360, 800, 'png', function (bPng: Blob){ window.open(URL.createObjectURL(bPng)) })
+                    svgString2Image(card.xmlString, 1440, 3200, 'png', function (bPng: Blob){ window.open(URL.createObjectURL(bPng)) })
                   }}>
                     Download & Share
                   </span>
