@@ -10,7 +10,6 @@ export const useWrappedImage = ({
 }: TWrappedCard): undefined | string => {
   const [imgSrc, setImgSrc] = useState<undefined | string>(undefined);
 
-  console.log(githubInfos);
   useEffect(() => {
     const canvas = document.createElement('canvas');
 
@@ -184,7 +183,6 @@ export const useWrappedImage = ({
             ctx.drawImage(shImg, cw - 340, ch - 50, 32, 32);
 
             ghUserImg.onload = () => {
-              console.log('this is loaded');
 
               ctx.drawImage(
                 ghUserImg,

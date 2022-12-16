@@ -14,7 +14,6 @@ const WrappedCards = ({ session }: TWrappedCard) => {
   const githubInfos: TGitHubUser = useGetGithubInfos(session, setImgReady);
 
   if (imgReady) {
-    console.log(githubInfos);
     if (!avatar) {
       if (githubInfos.user.avatarUrl !== undefined) {
         var xhr = new XMLHttpRequest();
