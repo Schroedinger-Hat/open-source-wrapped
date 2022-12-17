@@ -1,55 +1,55 @@
 // user
 export type TGitHubUser = {
-    user: TGithubUserInfo;
-}
+  user: TGithubUserInfo;
+};
 
 export type TGithubUserInfo = {
-    avatarUrl: string;
-    contributionsCollection: TContributionsCollection;
-    login: string;
-    repositories: TRepositories;
-    topRepositories: TTopRepositories;
-}
+  avatarUrl: string;
+  contributionsCollection: TContributionsCollection;
+  login: string;
+  repositories: TRepositories;
+  topRepositories: TTopRepositories;
+};
 
 // topRepositories
 export type TTopRepositories = {
-    edges: TEdge[];
-}
+  edges: TEdge[];
+};
 
 // repositories
 export type TRepositories = {
-    edges: TEdge[];
-}
+  edges: TEdge[];
+};
 
 // contributionsCollection
 export type TContributionsCollection = {
-    commitContributionsByRepository: TCommitContributionsByRepository[];
-    totalCommitContributions: number;
-}
+  commitContributionsByRepository: TCommitContributionsByRepository[];
+  totalCommitContributions: number;
+};
 
 export type TCommitContributionsByRepository = {
-    contributions: TContributions;
-    repository: TRepository;
-}
+  contributions: TContributions;
+  repository: TRepository;
+};
 
 export type TContributions = {
-    totalCount: number;
-}
+  totalCount: number;
+};
 
 export type TRepository = {
-    name: string;
-    languages: TLanguages;
-}
+  name: string;
+  languages: TLanguages;
+};
 
 export type TLanguages = {
-    edges: TEdge[]
-}
+  edges: TEdge[];
+};
 
 export type TEdge = {
-    node: TNode;
-}
+  node: TNode;
+};
 
 export type TNode = {
-    name: string;
-    stargazerCount?: number;
-}
+  name: string;
+  stargazerCount?: number;
+};

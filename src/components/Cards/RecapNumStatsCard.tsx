@@ -18,21 +18,21 @@ const RecapNumStatsCard = ({ nCommits, txt }: { nCommits: number, txt: string })
                 </mask>
                 <g mask="url(#mask0_8_4105)">
                     <rect width="280" height="60.6667" transform="translate(40 81)" fill="#11D861" />
-                    <text fill="#000100" xmlSpace="preserve" fontFamily="Avenir" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="50.1111" y="143.67">{nCommitsPadded}</tspan></text>
+                    <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="50.1111" y="143.67">{nCommitsPadded}</tspan></text>
                     <rect width="280" height="60.6667" transform="translate(40 141.667)" fill="#F675C2" />
-                    <text fill="#000100" xmlSpace="preserve" fontFamily="Avenir" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="50.1111" y="204.337">{nCommitsPadded}</tspan></text>
+                    <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="50.1111" y="204.337">{nCommitsPadded}</tspan></text>
                     <rect width="280" height="60.6667" transform="translate(40 202.333)" fill="#B75F0D" />
-                    <text fill="#000100" xmlSpace="preserve" fontFamily="Avenir" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="50.1111" y="265.004">{nCommitsPadded}</tspan></text>
+                    <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="50.1111" y="265.004">{nCommitsPadded}</tspan></text>
                     <rect width="280" height="60.6667" transform="translate(40 263)" fill="#6900BA" />
-                    <text fill="#E1E43F" xmlSpace="preserve" fontFamily="Avenir" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="50.1111" y="325.67">{nCommitsPadded}</tspan></text>
+                    <text fill="#E1E43F" xmlSpace="preserve" fontFamily="Helvetica" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="50.1111" y="325.67">{nCommitsPadded}</tspan></text>
                     <rect width="280" height="60.6667" transform="translate(40 323.667)" fill="#000100" />
-                    <text fill="#B75F0D" xmlSpace="preserve" fontFamily="Avenir" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="50.1111" y="386.337">{nCommitsPadded}</tspan></text>
+                    <text fill="#B75F0D" xmlSpace="preserve" fontFamily="Helvetica" fontSize="80.8889" fontWeight="500" letterSpacing="-0.02em"><tspan x="50.1111" y="386.337">{nCommitsPadded}</tspan></text>
                 </g>
-                <text fill="#000100" xmlSpace="preserve" fontFamily="Avenir" fontSize="16" fontStyle="italic" fontWeight="300" letterSpacing="-0.02em"><tspan x="113.747" y="438.204">My Minutes Listened</tspan></text>
-                <text fill="#000100" xmlSpace="preserve" fontFamily="Avenir" fontSize="24" fontWeight="500" letterSpacing="-0.02em"><tspan x="145.106" y="470.056">{nCommitsString}</tspan></text>
-                <text fill="#000100" xmlSpace="preserve" fontFamily="Avenir" fontSize="16" fontStyle="italic" fontWeight="300" letterSpacing="-0.02em"><tspan x="48.1888" y="530.204">That&#x2019;s more than </tspan><tspan x="189.851" y="530.204"> of other listeners in </tspan></text>
-                <text fill="#000100" xmlSpace="preserve" fontFamily="Avenir" fontSize="16" fontWeight="500" letterSpacing="-0.02em"><tspan x="159.608" y="530.204">65%</tspan><tspan x="131.061" y="553.204">New York City</tspan></text>
-                <text fill="#000100" xmlSpace="preserve" fontFamily="Avenir" fontSize="13" fontWeight="500" letterSpacing="0em"><tspan x="221.434" y="753.134">#githubwrapped2022</tspan></text>
+                <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="16" fontStyle="italic" fontWeight="300" letterSpacing="-0.02em"><tspan x="113.747" y="438.204">My Minutes Listened</tspan></text>
+                <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="24" fontWeight="500" letterSpacing="-0.02em"><tspan x="145.106" y="470.056">{nCommitsString}</tspan></text>
+                <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="16" fontStyle="italic" fontWeight="300" letterSpacing="-0.02em"><tspan x="48.1888" y="530.204">That&#x2019;s more than </tspan><tspan x="189.851" y="530.204"> of other listeners in </tspan></text>
+                <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="16" fontWeight="500" letterSpacing="-0.02em"><tspan x="159.608" y="530.204">65%</tspan><tspan x="131.061" y="553.204">New York City</tspan></text>
+                <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="13" fontWeight="500" letterSpacing="0em"><tspan x="221.434" y="753.134">#githubwrapped2022</tspan></text>
                 <rect x="9" y="717" width="62" height="63" fill="url(#pattern0)" />
                 <defs>
                     <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
