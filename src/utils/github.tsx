@@ -23,6 +23,7 @@ export function getTopLanguage(githubInfos: TGitHubUser): string {
       }, {});
   // @ts-ignore
   return Object.keys(languageMap).reduce((a, b) =>
+    // @ts-ignore
     languageMap[a] > languageMap[b] ? a : b
   );
 }
