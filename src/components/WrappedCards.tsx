@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { renderToString } from 'react-dom/server'
 import { useGetGithubInfos } from '../hooks/useGetGithubInfos';
 import { TGitHubUser } from 'src/types/TGithub';
