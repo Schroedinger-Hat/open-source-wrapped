@@ -10,7 +10,7 @@ export default NextAuth({
             authorization: {
               params: {
                 url: "https://github.com/login/oauth/authorize",
-                scope: "repo"
+                scope: ""
               }
             },
             profile(profile) {
