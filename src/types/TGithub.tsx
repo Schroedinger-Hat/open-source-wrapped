@@ -47,6 +47,7 @@ export type TLanguages = {
 
 export type TEdge = {
   node: TNode;
+  size?: number;
 };
 
 export type TNode = {

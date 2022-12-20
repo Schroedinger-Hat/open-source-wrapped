@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { TGitHubUser, TGithubUserInfo } from "src/types/TGithub";
 
-const RecapTopCard = (githubInfos: any, img: any) => {
+const RecapTopCard = (githubInfos: TGitHubUser, img: any) => {
     const defaultMaskSize = 35;
     const usernameTxt = githubInfos?.user.login || '';
     let usernamePadded = githubInfos?.user.login || '';
     const diff = (defaultMaskSize - usernameTxt.length);
+    const top5commitContribution = githubInfos?.user.contributionsCollection.commitContributionsByRepository.slice(0,5)
 
     if (diff > 0) {
         const padding = Math.ceil(diff / 2);
@@ -45,7 +46,7 @@ const RecapTopCard = (githubInfos: any, img: any) => {
                     )}
 
                     <text fill="#fff" xmlSpace="preserve" fontFamily="Helvetica" fontSize="16" fontWeight="500" letterSpacing="0em"><tspan x="210.041" y="520.991">Top Commits</tspan></text>
-                    {githubInfos?.user.contributionsCollection?.commitContributionsByRepository.map(
+                    {top5commitContribution?.map(
                         (item: any, idx: number) => {
                             let txt = '';
                             const baseY = 550.204;
