@@ -18,7 +18,7 @@ export const useGetGithubInfos = (
       const _ = async () => {
         const ghQuery = await gh.graphql(
           `query {
-            user(login: "Spyna") {
+            user(login: "${session.user.login}") {
               login
               avatarUrl
               contributionsCollection(
@@ -26,7 +26,7 @@ export const useGetGithubInfos = (
                 to: "2022-12-31T23:59:59Z"
               ) {
                 totalCommitContributions
-                commitContributionsByRepository(maxRepositories: 5) {
+                commitContributionsByRepository(maxRepositories: 50) {
                   repository {
                     name
                     languages(first: 100) {
