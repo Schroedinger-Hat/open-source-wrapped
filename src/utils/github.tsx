@@ -35,6 +35,8 @@ export function getTopLanguage(githubInfos: TGitHubUser): string {
     return '';
   }
 
+  console.log(languageMap)
+
   // @ts-ignore
   return languages.reduce((a, b) =>
     // @ts-ignore

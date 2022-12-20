@@ -18,7 +18,7 @@ export const useGetGithubInfos = (
       const _ = async () => {
         const ghQuery = await gh.graphql(
           `query {
-            user(login: "${session.user.login}") {
+            user(login: "Spyna") {
               login
               avatarUrl
               contributionsCollection(
@@ -31,6 +31,7 @@ export const useGetGithubInfos = (
                     name
                     languages(first: 100) {
                       edges {
+                        size
                         node {
                           name
                         }
