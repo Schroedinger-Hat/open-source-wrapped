@@ -7,6 +7,11 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
+<!-- Open Source Saturday Badge-->
+<a href="https://www.meetup.com/it-IT/Open-Source-Saturday-Milano/">
+  <img src="./public/svg/oss-badge.svg" alt="Open Source Saturday Badge"/>
+</a>
+
 </div>
 
 <!-- PROJECT LOGO -->
