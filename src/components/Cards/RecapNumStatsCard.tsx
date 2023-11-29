@@ -32,7 +32,7 @@ const RecapNumStatsCard = ({ nCommits, txt }: { nCommits: number, txt: string })
                 <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="24" fontWeight="500" letterSpacing="-0.02em"><tspan x="145.106" y="470.056">{nCommitsString}</tspan></text>
                 <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="16" fontStyle="italic" fontWeight="300" letterSpacing="-0.02em"><tspan x="48.1888" y="530.204">That&#x2019;s more than </tspan><tspan x="189.851" y="530.204"> of other listeners in </tspan></text>
                 <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="16" fontWeight="500" letterSpacing="-0.02em"><tspan x="159.608" y="530.204">65%</tspan><tspan x="131.061" y="553.204">New York City</tspan></text>
-                <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="13" fontWeight="500" letterSpacing="0em"><tspan x="221.434" y="753.134">#githubwrapped2022</tspan></text>
+                <text fill="#000100" xmlSpace="preserve" fontFamily="Helvetica" fontSize="13" fontWeight="500" letterSpacing="0em"><tspan x="221.434" y="753.134">#githubwrapped2023</tspan></text>
                 <rect x="9" y="717" width="62" height="63" fill="url(#pattern0)" />
                 <defs>
                     <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">

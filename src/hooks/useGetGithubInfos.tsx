@@ -22,8 +22,8 @@ export const useGetGithubInfos = (
               login
               avatarUrl
               contributionsCollection(
-                from: "2022-01-01T00:00:01Z"
-                to: "2022-12-31T23:59:59Z"
+                from: "2023-01-01T00:00:01Z"
+                to: "2023-12-31T23:59:59Z"
               ) {
                 totalCommitContributions
                 commitContributionsByRepository(maxRepositories: 50) {
