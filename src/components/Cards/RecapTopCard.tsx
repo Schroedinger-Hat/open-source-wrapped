@@ -65,7 +65,7 @@ const RecapTopCard = (githubInfos: TGitHubUser, img: any) => {
                 </g>
                 <g clipPath="url(#clip4_10_1203)">
                     <rect x="16" y="714" width="62" height="63" fill="url(#pattern0)" />
-                    <text fill="#e2e441" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Helvetica" fontSize="20" fontWeight="500" letterSpacing="0em"><tspan x="140.934" y="752.134">#githubwrapped2022</tspan></text>
+                    <text fill="#e2e441" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Helvetica" fontSize="20" fontWeight="500" letterSpacing="0em"><tspan x="140.934" y="752.134">#githubwrapped2023</tspan></text>
                 </g>
                 <rect x="98" y="206" width="159.131" height="164" fill="url(#pattern1)" />
                 <defs>

@@ -15,7 +15,7 @@ const TopCard = ({ txt }: { txt: string }) => {
                 </g>
                 <text fill="#fff" xmlSpace="preserve" style={{whiteSpace: 'pre'}} alignmentBaseline="central" fontFamily="Helvetica" fontSize="50" fontWeight="500" textAnchor="middle" letterSpacing="-0.02em"><tspan x="180.614" y="550.704">{txt}</tspan></text>
                 <g clipPath="url(#clip3_10_1110)">
-                    <text fill="#fff" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Helvetica" fontSize="20" fontWeight="500" letterSpacing="0em"><tspan x="140.934" y="752.134">#githubwrapped2022</tspan></text>
+                    <text fill="#fff" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontFamily="Helvetica" fontSize="20" fontWeight="500" letterSpacing="0em"><tspan x="140.934" y="752.134">#githubwrapped2023</tspan></text>
                 </g>
                 <rect x="16" y="712" width="62" height="63" fill="url(#pattern0)" />
                 <defs>
