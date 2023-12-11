@@ -113,7 +113,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #e52339;
   text-decoration: inherit;
 }
 
@@ -128,6 +128,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: hidden;
 }
 
 h1 {
@@ -188,8 +189,7 @@ h1 {
   color: #fff;
   cursor: pointer;
   justify-content: center;
-  padding: .5em 2.5em;
-  font-size: 1.3em;
+  padding: 1.3em 1.5em;
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
@@ -239,12 +239,57 @@ h1 {
   );
 }
 
+.clearfix {
+  clear: both;
+}
+
+.input-container {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.input-username {
+  display: block;
+  border-style: solid;
+  border-color: #f2f2f2;
+  border-radius: 4px;
+  padding: .3em;
+  height: 2.3em;
+  width: 100%;
+  font-size: 16px;
+}
+
+#lottie:before {
+  content: ' ';
+  background: #00000060;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div#lottie-waiting:before {
+  width: 100%;
+  height: 100%;
+  content: "Loading data...";
+  position: absolute;
+  background: #00000060;
+  display: flex;
+  place-content: center;
+  padding-top: 0.8em;
+  font-size: 2.5em;
+  color: #ccc;
+}
+
 footer {
   display: flex;
 }
 
 .footer__wrap {
   margin: auto;
+  text-align: center;
 }
 
 .wrapped__wrap {
@@ -261,7 +306,7 @@ footer {
 
 .header-image__wrap .button {
   display: flex;
-  width: 45.5%;
+  width: 73.5%;
   position: absolute;
   left: 32px;
   top: 0px;
@@ -269,20 +314,22 @@ footer {
 }
 
 .Wrapped img {
-  width: 200px;
+  width: auto;
   height: auto;
   margin: 1rem 2rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+.image-slide.hidden {
+  display: none;
+}
 
-  a:hover {
-    color: var(--gray-300);
-  }
+:root {
+  color: #f2f2f2;
+  background-color: #585756;
+}
+
+a:hover {
+  color: var(--gray-300);
 }
 
 @media screen and (max-width: 768px) {
@@ -309,4 +356,5 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }

@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.5.3",
+    "html2canvas": "^1.4.1",
     "next": "^13.0.6",
     "next-auth": "^4.18.6",
     "octokit": "^2.0.10",

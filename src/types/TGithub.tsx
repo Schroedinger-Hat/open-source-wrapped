@@ -24,7 +24,18 @@ export type TRepositories = {
 // contributionsCollection
 export type TContributionsCollection = {
   commitContributionsByRepository: TCommitContributionsByRepository[];
+  pullRequestReviewContributionsByRepository: TPullRequestReviewContributionsByRepository[];
+  contributionCalendar: TContributionCalendar,
   totalCommitContributions: number;
+};
+
+export type TContributionCalendar = {
+  totalContributions: number;
+};
+
+export type TPullRequestReviewContributionsByRepository = {
+  contributions: TContributions;
+  repository: TRepository;
 };
 
 export type TCommitContributionsByRepository = {

@@ -39,13 +39,15 @@ exports.handler = async function (event, context) {
         waitUntil: 'domcontentloaded',
     })
 
+    const element = await page.$('.wrapped__wrap');
+
     return {
         statusCode: 200,
         headers: {
             'Content-Type': 'image/png',
             'Cache-Control': 's-maxage=86400',
         },
-        body: (await page.screenshot()).toString('base64'),
+        body: (await element.screenshot()).toString('base64'),
         isBase64Encoded: true,
     }
 }

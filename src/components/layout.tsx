@@ -1,3 +1,4 @@
+import { Player } from '@lottiefiles/react-lottie-player';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -45,7 +46,21 @@ export default function Layout({ children }: any) {
           content={`https://wrapped.schrodinger-hat.it/.netlify/functions/generator?username=${user}`}
         />
       </Head>
-      <main>{children}</main>
+      <main>
+        <Player
+          src="https://lottie.host/2190284c-daed-48a4-b07b-fff6c242e854/0yoXLzjEtd.json"
+          background="transparent"
+          speed={0.1}
+          style={{
+            position: 'absolute',
+            width: '100%',
+            height: 'auto',
+            top: 0,
+            left: 0,
+            zIndex: -1,
+          }} loop autoplay />
+        {children}
+      </main>
     </>
   );
 }
