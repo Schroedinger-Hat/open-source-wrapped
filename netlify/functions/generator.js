@@ -35,10 +35,9 @@ exports.handler = async function (event, context) {
         username: event.queryStringParameters?.username
     })
 
-    await page.setContent(content, {
-        waitUntil: 'domcontentloaded',
+    await page.goto(`https://deploy-preview-54--clever-sopapillas-765a45.netlify.app/wrapped/${event.queryStringParameters?.username}?social=true`, {
+        waitUntil: 'networkidle2',
     })
-
     const element = await page.$('.wrapped__wrap');
 
     return {

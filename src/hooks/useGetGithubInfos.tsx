@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { Octokit } from 'octokit';
 import { useEffect, useState } from 'react';
 import { TGitHubUser } from 'src/types/TGithub';
@@ -6,19 +7,23 @@ export const useGetGithubInfos = (
   session: any,
   setImgReady: any
 ): TGitHubUser => {
+  const router = useRouter();
+  const { user = null, social = false } = router.query;
   const [githubInfos, setGithubInfos] = useState<any>(null);
   const [ghRequest, setGhRequest] = useState(false);
 
+  const username = session && session.user ? session.user : user;
+
   useEffect(() => {
-    if (session && session.user) {
+    if (username) {
       const gh = new Octokit({
-        auth: session.accessToken
+        auth: session && session.accessToken ? session.accessToken : process.env.NEXT_PUBLIC_GH_PERSONAL_TOKEN,
       });
 
       const _ = async () => {
         const ghQuery = await gh.graphql(
           `query {
-            user(login: "${session.user.login}") {
+            user(login: "${username}") {
               login
                 avatarUrl
                 contributionsCollection(

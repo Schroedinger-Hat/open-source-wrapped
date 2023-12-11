@@ -40,12 +40,17 @@ const WrappedCards = ({ session }: TWrappedCard) => {
       },
       {
         name: 'recap-num-txt-card',
-        xmlString: `data:image/svg+xml;base64, ${Buffer.from(renderToString(RecapNumTxtCard({ nCommits: githubInfos?.user.contributionsCollection
+        xmlString: `data:image/svg+xml;base64, ${Buffer.from(renderToString(RecapNumTxtCard({ background: '#E1E43F', number: githubInfos?.user.contributionsCollection
           ?.totalCommitContributions, txt: 'Commits' }))).toString('base64')}`,
       },
       {
         name: 'top-card',
         xmlString: `data:image/svg+xml;base64, ${Buffer.from(renderToString(TopCard({ txt: getTopLanguage(githubInfos) }))).toString('base64')}`,
+      },
+      {
+        name: 'recap-num-txt-card',
+        xmlString: `data:image/svg+xml;base64, ${Buffer.from(renderToString(RecapNumTxtCard({ background: '#dfa7c9', number: githubInfos?.user.contributionsCollection
+          ?.contributionCalendar.totalContributions, txt: 'Contributions' }))).toString('base64')}`,
       },
       {
         name: 'recap-top-card',
@@ -58,16 +63,6 @@ const WrappedCards = ({ session }: TWrappedCard) => {
         {cards.map((card) => {
           return (
             <div key={card.name} className='image-slide'>
-              <div className='header-image'>
-                <div className='header-image__wrap'>
-                  <span className="button" onClick={(e) => {
-                    e.preventDefault();
-                    svgString2Image(card.xmlString, 1440, 3200, 'png', function (bPng: Blob){ window.open(URL.createObjectURL(bPng)) })
-                  }}>
-                    Download & Share
-                  </span>
-                </div>
-              </div>
               <Image
                 alt={card.name}
                 width={400}
