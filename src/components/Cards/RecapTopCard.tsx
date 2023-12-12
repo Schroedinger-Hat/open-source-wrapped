@@ -6,6 +6,7 @@ const RecapTopCard = (githubInfos: TGitHubUser, img: any) => {
     let usernamePadded = githubInfos?.user.login || '';
     const diff = (defaultMaskSize - usernameTxt.length);
     const top5commitContribution = githubInfos?.user.contributionsCollection.commitContributionsByRepository.slice(0,5)
+    const top5reviewContributions = githubInfos?.user.contributionsCollection.pullRequestReviewContributionsByRepository.slice(0,5);
 
     if (diff > 0) {
         const padding = Math.ceil(diff / 2);
@@ -25,22 +26,21 @@ const RecapTopCard = (githubInfos: TGitHubUser, img: any) => {
                 <g clipPath="url(#clip2_10_1203)">
                     <path d="M177.937 150.583C178.975 149.247 180.994 149.247 182.032 150.583L205.228 180.447C229.118 211.205 256.764 238.851 287.521 262.741L317.386 285.937C318.722 286.975 318.722 288.994 317.386 290.032L287.521 313.228C256.764 337.118 229.118 364.764 205.228 395.521L182.032 425.386C180.994 426.722 178.975 426.722 177.937 425.386L154.741 395.521C130.851 364.764 103.205 337.118 72.4474 313.228L42.583 290.032C41.2467 288.994 41.2467 286.975 42.583 285.937L72.4474 262.741C103.205 238.851 130.851 211.205 154.741 180.447L177.937 150.583Z" fill="#F675C2" />
                 </g>
-                <text textAnchor="middle" fill="#e2e441" xmlSpace="preserve" style={{whiteSpace: 'pre'}} alignmentBaseline="central" fontFamily="Helvetica" fontSize="35" fontWeight="500" letterSpacing="-0.02em"><tspan x="180.614" y="480.704">{usernamePadded}</tspan></text>
                 <g clipPath="url(#clip3_10_1203)">
-                    <text fill="#fff" xmlSpace="preserve" fontFamily="Helvetica" fontSize="16" fontWeight="500" letterSpacing="0em"><tspan x="32.6562" y="520.991">Top Repos and 🌟</tspan></text>
-                    {githubInfos?.user.repositories?.edges.map(
+                    <text fill="#fff" xmlSpace="preserve" alignmentBaseline="central" fontFamily="Helvetica" fontSize="16" fontWeight="500" letterSpacing="0em"><tspan x="32.6562" y="520.991">Most PR reviewed</tspan></text>
+                    {top5reviewContributions.map(
                         (item: any, idx: number) => {
                             let txt = '';
                             const baseY = 550.204;
                             const y = baseY + (idx * 30);
-                            if (item.node) {
-                                txt = item.node.stargazerCount + ' ' + (item.node.name.length > 16
-                                    ? item.node.name.substr(0, 16) + '...'
-                                    : item.node.name);
+                            if (item) {
+                                txt = item.contributions.totalCount + ' ' + (item.repository.name.length > 12
+                                    ? item.repository.name.substr(0, 12) + '...'
+                                    : item.repository.name);
                             }
 
                             return (
-                                <text fill="#e2e441" xmlSpace="preserve" fontFamily="Helvetica" fontSize="15" fontWeight="500" letterSpacing="0em"><tspan x="32.8594" y={y}>{txt}</tspan></text>
+                                <text fill="#e2e441" xmlSpace="preserve" alignmentBaseline="central" fontFamily="Helvetica" fontSize="15" fontWeight="500" letterSpacing="0em"><tspan x="32.8594" y={y}>{txt}</tspan></text>
                             );
                         }
                     )}

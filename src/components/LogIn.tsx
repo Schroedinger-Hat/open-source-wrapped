@@ -6,7 +6,7 @@ const LogIn = ({ session }: { session: any }) => {
       {session && session.user ? null : (
         <div className="action">
           <button className="button" onClick={() => signIn()}>
-            Sign in
+            Wrap me up
           </button>
         </div>
       )}
