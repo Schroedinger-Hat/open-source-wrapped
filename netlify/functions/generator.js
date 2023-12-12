@@ -1,42 +1,18 @@
-const chromium = require('@sparticuz/chromium')
 const puppeteer = require('puppeteer-core')
-const fs = require('fs')
-
-function populateTemplate(content, data) {
-    // Replace all instances of e.g. `{{ title }}` with the title.
-    for (const [key, value] of Object.entries(data)) {
-        content = content.replace(new RegExp(`{{ ${key} }}`, 'g'), value)
-    }
-
-    return content;
-}
 
 exports.handler = async function (event, context) {
-    // Use local Chrome when testing.
-    let localChrome = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
-    let executable = fs.existsSync(localChrome) ? localChrome : chromium.executablePath
-
+    const cloudPuppeteerToken = process.env.CLOUD_PUPPETEER_TOKEN;
+    
     // Launch Chrome.
-    const browser = await puppeteer.launch({
-        args: chromium.args,
-        executablePath: await executable,
-        headless: true,
-        // The optimum size for OG images.
-        defaultViewport: {height: 1024, width: 1024},
+    const browser = await puppeteer.connect({
+        browserWSEndpoint: `wss://chrome.browserless.io?token=${cloudPuppeteerToken}`,
     })
+    
+    const page = await browser.newPage()
+    await page.setViewport({ width: 1920, height: 1080 })
 
-    let page = await browser.newPage()
-
-    // Read the template HTML off of disk.
-    let content = fs.readFileSync(__dirname + '/assets/cover.svg').toString()
-
-    content = populateTemplate(content, {
-        // Get the title out of the querystring.
-        username: event.queryStringParameters?.username
-    })
-
-    await page.goto(`https://deploy-preview-54--clever-sopapillas-765a45.netlify.app/wrapped/${event.queryStringParameters?.username}?social=true`, {
-        waitUntil: 'networkidle2',
+    await page.goto(`https://wrapped.schrodinger-hat.it/wrapped/${event.queryStringParameters?.username}?social=true`, {
+        waitUntil: 'networkidle0',
     })
     const element = await page.$('.wrapped__wrap');
 

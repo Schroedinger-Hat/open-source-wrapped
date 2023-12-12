@@ -261,13 +261,6 @@
   resolved "https://registry.npmjs.org/@panva/hkdf/-/hkdf-1.0.2.tgz"
   integrity sha512-MSAs9t3Go7GUkMhpKC44T58DJ5KGk2vBo+h1cqQeqlMfdGkxaVB78ZWpv9gYi/g2fa4sopag9gJsNvS8XGgWJA==
 
-"@sparticuz/chromium@^109.0.0":
-  version "109.0.0"
-  resolved "https://registry.npmjs.org/@sparticuz/chromium/-/chromium-109.0.0.tgz"
-  integrity sha512-x1B44QCZ6zbTW1P7B5G6penrCHywcqUhPz5cRhbXvRMkxl1qNRytkdlMgy/rb6FCNhDEMurc+7gw/uP9YvF9BQ==
-  dependencies:
-    tar-fs "^2.1.1"
-
 "@swc/helpers@0.4.14":
   version "0.4.14"
   resolved "https://registry.npmjs.org/@swc/helpers/-/helpers-0.4.14.tgz"
@@ -996,7 +989,7 @@ styled-jsx@5.1.0:
   dependencies:
     client-only "0.0.1"
 
-tar-fs@^2.0.0, tar-fs@^2.1.1:
+tar-fs@^2.0.0:
   version "2.1.1"
   resolved "https://registry.npmjs.org/tar-fs/-/tar-fs-2.1.1.tgz"
   integrity sha512-V0r2Y9scmbDRLCNex/+hYzvp/zyYjvFbHPNgVTKfQvVrb6guiE/fxP+XblDNR011utopbkex2nM4dHNV6GDsng==

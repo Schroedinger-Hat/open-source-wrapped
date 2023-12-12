@@ -12,7 +12,7 @@ export const useGetGithubInfos = (
   const [githubInfos, setGithubInfos] = useState<any>(null);
   const [ghRequest, setGhRequest] = useState(false);
 
-  const username = session && session.user ? session.user : user;
+  const username = session && session.user ? session.user?.login : user;
 
   useEffect(() => {
     if (username) {
