@@ -2,17 +2,27 @@ import WrappedCards from '@/components/WrappedCards';
 import html2canvas from 'html2canvas';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import dataURLtoBlob from 'src/utils/dataUrlToBlob';
+
+export async function getServerSideProps() {
+  return { props: {  } }
+}
 
 function Wrapped() {
   const { data: session } = useSession();
+
+  const router = useRouter();
+  const { user = null } = router.query;
+  // @ts-ignore
+  const username = session && session.user ? session.user?.login : user;
 
   function download(canvas: HTMLCanvasElement, filename: string) {
     const data = canvas.toDataURL("image/png;base64");
     const url = URL.createObjectURL(dataURLtoBlob(data));
     const a = document.createElement('a');
     a.href = url;
-    a.setAttribute('download', `${session?.user?.name}-wrapped-2023.png`);
+    a.setAttribute('download', `${username}-wrapped-2023.png`);
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
@@ -31,7 +41,7 @@ function Wrapped() {
   }
 
   const wrappedURL = 'https://wrapped.schrodinger-hat.it';
-  const sharerURL = `${wrappedURL}/ticket/${session?.user?.name}`;
+  const sharerURL = `${wrappedURL}/wrapped/${username}?social=true`;
 
   return (
     <div className="Wrapped">
@@ -70,6 +80,7 @@ function Wrapped() {
           type="Hello SH!"
           score="10"
           session={session}
+          pathUser={user}
         />
       </div>
     </div>

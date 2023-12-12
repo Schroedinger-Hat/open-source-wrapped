@@ -5,4 +5,5 @@ export type TWrappedCard = {
   img: string;
   session?: any;
   githubInfos?: any;
+  pathUser: any;
 };

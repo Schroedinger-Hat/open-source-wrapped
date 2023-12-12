@@ -1,14 +1,12 @@
-import { useRouter } from 'next/router';
 import { Octokit } from 'octokit';
 import { useEffect, useState } from 'react';
 import { TGitHubUser } from 'src/types/TGithub';
 
 export const useGetGithubInfos = (
   session: any,
-  setImgReady: any
+  setImgReady: any,
+  user: string,
 ): TGitHubUser => {
-  const router = useRouter();
-  const { user = null, social = false } = router.query;
   const [githubInfos, setGithubInfos] = useState<any>(null);
   const [ghRequest, setGhRequest] = useState(false);
 
