@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
     })
     
     const page = await browser.newPage()
-    await page.setViewport({ width: 1920, height: 1080 })
+    await page.setViewport({ width: 2560, height: 1440 })
 
     await page.goto(`https://wrapped.schrodinger-hat.it/wrapped/${event.queryStringParameters?.username}?social=true`, {
         waitUntil: 'networkidle0',
