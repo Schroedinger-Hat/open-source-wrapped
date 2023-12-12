@@ -80,6 +80,7 @@ function Wrapped() {
           type="Hello SH!"
           score="10"
           session={session}
+          pathUser={user}
         />
       </div>
     </div>

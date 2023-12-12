@@ -8,10 +8,10 @@ import { getTopLanguage } from 'src/utils/github';
 import Image from 'next/image';
 import { RecapNumTxtCard, RecapTopCard, TopCard, WelcomeCard } from './Cards';
 
-const WrappedCards = ({ session }: TWrappedCard) => {
+const WrappedCards = ({ session, pathUser }: TWrappedCard) => {
   const [imgReady, setImgReady] = useState(false);
   const [avatar, setAvatar] = useState('');
-  const githubInfos: TGitHubUser = useGetGithubInfos(session, setImgReady);
+  const githubInfos: TGitHubUser = useGetGithubInfos(session, setImgReady, pathUser);
 
   if (imgReady) {
     if (!avatar) {
