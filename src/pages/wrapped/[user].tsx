@@ -41,7 +41,7 @@ function Wrapped() {
   }
 
   const wrappedURL = 'https://wrapped.schrodinger-hat.it';
-  const sharerURL = `${wrappedURL}/wrapped/${username}?social=true`;
+  const sharerURL = `${wrappedURL}/.netlify/functions/generator?user=${username}&social=true`;
 
   return (
     <div className="Wrapped">
@@ -54,7 +54,7 @@ function Wrapped() {
         <span style={{ padding: '0.8em 1.5em' }} className="button" onClick={() => share()}>
             Download & Share
         </span>
-        <a
+        {/*<a
           type='button'
           target='_blank'
           rel='noreferrer'
@@ -71,7 +71,7 @@ function Wrapped() {
           className='ticket-share social-button'
         >
           <Image width={28} height={28} src="/icons/linkedin.svg" alt="Linkedin" />
-        </a>
+        </a>*/}
       </div>
       <div className="wrapped__wrap">
         <WrappedCards
