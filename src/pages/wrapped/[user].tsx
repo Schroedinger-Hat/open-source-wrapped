@@ -40,7 +40,7 @@ function Wrapped() {
     }
   }
 
-  const wrappedURL = 'https://wrapped.schrodinger-hat.it';
+  const wrappedURL = 'https://wrapped.schroedinger-hat.org';
   const sharerURL = `${wrappedURL}/.netlify/functions/generator?user=${username}&social=true`;
 
   return (

@@ -1,6 +1,6 @@
 
 <div align='center'>
-  <h1>Open Source Wrapped with ❤️ by Schrodinger's Hat</h1>
+  <h1>Open Source Wrapped with ❤️ by Schrödinger's Hat</h1>
   
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -19,20 +19,20 @@
 <div align="center">
   <h1>Open Source Wrapped</h1>
   
-  <a href="https://github.com/Schrodinger-Hat/open-source-wrapped">
-    <img src="https://github.com/Schrodinger-Hat/osday-2023/raw/main/public/sh.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/schroedinger-Hat/open-source-wrapped">
+    <img src="https://github.com/schroedinger-Hat/osday-2023/raw/main/public/sh.png" alt="Logo" width="80" height="80">
   </a>
 
   <p align="center">
     <br />
-    <a href="https://github.com/Schrodinger-Hat/open-source-wrapped"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/schroedinger-Hat/open-source-wrapped"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Schrodinger-Hat/open-source-wrapped">View Demo</a>
+    <a href="https://github.com/schroedinger-Hat/open-source-wrapped">View Demo</a>
     ·
-    <a href="https://github.com/Schrodinger-Hat/open-source-wrapped/issues">Report Bug</a>
+    <a href="https://github.com/schroedinger-Hat/open-source-wrapped/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Schrodinger-Hat/open-source-wrapped/issues">Request Feature</a>
+    <a href="https://github.com/schroedinger-Hat/open-source-wrapped/issues">Request Feature</a>
   </p>
 </div>
 
@@ -88,16 +88,16 @@ Don't forget to give the project a star! Thanks again!
 
 ## Contact
 
-Schrodinger's Hat Team - [@schrodinger_hat](mailto:osday@schrodinger-hat.it)
+Schrödinger's Hat Team - [@schroedinger_hat](mailto:dev@schroedinger-hat.org)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Schrodinger-Hat/open-source-wrapped.svg?style=for-the-badge
-[contributors-url]: https://github.com/Schrodinger-Hat/open-source-wrapped/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Schrodinger-Hat/open-source-wrapped.svg?style=for-the-badge
-[forks-url]: https://github.com/Schrodinger-Hat/open-source-wrapped/network/members
-[stars-shield]: https://img.shields.io/github/stars/Schrodinger-Hat/open-source-wrapped.svg?style=for-the-badge
-[stars-url]: https://github.com/Schrodinger-Hat/open-source-wrapped/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Schrodinger-Hat/open-source-wrapped.svg?style=for-the-badge
-[issues-url]: https://github.com/Schrodinger-Hat/open-source-wrapped/issues
+[contributors-shield]: https://img.shields.io/github/contributors/schroedinger-Hat/open-source-wrapped.svg?style=for-the-badge
+[contributors-url]: https://github.com/schroedinger-Hat/open-source-wrapped/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/schroedinger-Hat/open-source-wrapped.svg?style=for-the-badge
+[forks-url]: https://github.com/schroedinger-Hat/open-source-wrapped/network/members
+[stars-shield]: https://img.shields.io/github/stars/schroedinger-Hat/open-source-wrapped.svg?style=for-the-badge
+[stars-url]: https://github.com/schroedinger-Hat/open-source-wrapped/stargazers
+[issues-shield]: https://img.shields.io/github/issues/schroedinger-Hat/open-source-wrapped.svg?style=for-the-badge
+[issues-url]: https://github.com/schroedinger-Hat/open-source-wrapped/issues
