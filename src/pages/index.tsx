@@ -41,7 +41,7 @@ function Wrapped() {
       </div>
       <footer>
         <div className='footer__wrap'>
-          Made with ❤️ by <a href='https://www.schrodinger-hat.it' target='_blank'>Schrodinger Hat</a> | <a href='https://github.com/Schrodinger-Hat/open-source-wrapped' target='_blank'>Github</a>
+          Made with ❤️ by <a href='https://www.schroedinger-hat.org' target='_blank'>Schrödinger Hat</a> | <a href='https://github.com/Schroedinger-Hat/open-source-wrapped' target='_blank'>Github</a>
         </div>
       </footer>
     </>

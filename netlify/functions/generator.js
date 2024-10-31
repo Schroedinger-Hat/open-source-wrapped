@@ -11,7 +11,7 @@ exports.handler = async function (event, context) {
     const page = await browser.newPage()
     await page.setViewport({ width: 2560, height: 1440 })
 
-    await page.goto(`https://wrapped.schrodinger-hat.it/wrapped/${event.queryStringParameters?.user}?social=true`, {
+    await page.goto(`https://wrapped.schroedinger-hat.org/wrapped/${event.queryStringParameters?.user}?social=true`, {
         waitUntil: 'networkidle0',
     })
     const element = await page.$('.wrapped__wrap');
